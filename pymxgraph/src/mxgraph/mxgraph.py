@@ -6,6 +6,8 @@ import zlib
 import html
 import defusedxml.ElementTree as dxml
 import xml.etree.ElementTree as ET
+# https://docs.python.org/ja/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree
+
 from collections.abc import MutableMapping
 
 def int_or_none(a):
@@ -460,27 +462,13 @@ class MxGraph:
         diagram_xml.set('id', self.diagram_id)
         diagram_xml.set('name', 'Page-1')
         graph_xml = self.mxgraph_model.to_xml(self.cells)
-        s = dxml.tostring(graph_xml )
-        #co = zlib.compressobj(wbits=-zlib.MAX_WBITS)
-        #b = co.compress( bytes(urllib.parse.quote(s), 'ascii'))
-        #b += co.flush(zlib.Z_FINISH)
-        #s = base64.b64encode(b)
-        s2 = s.decode('utf-8')
-        print(s2)
-        print("")
-        print("")
-        print("")
-        #diagram_xml.text = html.unescape(s2)
-        diagram_xml.text = s2
-        #diagram_xml.text = s.decode('utf-8')
+        diagram_xml.append(graph_xml)
         mxfile_xml = ET.Element('mxfile')
         mxfile_xml.set('host', 'py-mxgraph')
         # mxfile_xml.set('modified', 'TODO')
         # mxfile_xml.set('version', 'TODO')
         # mxfile_xml.set('type', 'device')
-        test = "<test>AAA</test>".decode('utf-8')
-        #mxfile_xml.append(diagram_xml)
-        mxfile_xml.append(test)
+        mxfile_xml.append(diagram_xml)
         # TODO: dump to file f, not stdout
         # ET.dump(mxfile_xml)
         f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
