@@ -169,23 +169,23 @@ def create_write_drawio4():
     style2 = { 'shape':'rectangle', 'whiteSpace': 'wrap', 'html': '1'  }
    
     g1.port_size = 30
-    g1.add_right_port(rt_a, "A1", "A1",10,style=style2 )
-    g1.add_right_port(rt_a, "A2", "A2",50,style=style2 )
-    g1.add_left_port(rt_a, "B1", "B1",10, style=style2 )
-    g1.add_left_port(rt_a, "B2", "B2",50, style=style2 )
-    g1.add_top_port(rt_a, "C1", "C1",10,style=style2 )
-    g1.add_top_port(rt_a, "C2", "C2",50,style=style2 )
-    g1.add_bottom_port(rt_a, "D1", "D1",10,style=style2 )
-    g1.add_bottom_port(rt_a, "D2", "D2",50,style=style2 )
+    g1.add_right_port(rt_a, "A1", 10,style=style2 )
+    g1.add_right_port(rt_a, "A2", 50,style=style2 )
+    g1.add_left_port(rt_a, "B1", 10, style=style2 )
+    g1.add_left_port(rt_a, "B2", 50, style=style2 )
+    g1.add_top_port(rt_a, "C1", 10,style=style2 )
+    g1.add_top_port(rt_a, "C2", 50,style=style2 )
+    g1.add_bottom_port(rt_a, "D1", 10,style=style2 )
+    g1.add_bottom_port(rt_a, "D2", 50,style=style2 )
 
-    g1.add_right_port(rt_b, "A1", "A1",10,style=style2 )
-    g1.add_right_port(rt_b, "A2", "A2",50,style=style2 )
-    g1.add_left_port(rt_b, "B1", "B1",10, style=style2 )
-    g1.add_left_port(rt_b, "B2", "B2",50, style=style2 )
-    g1.add_top_port(rt_b, "C1", "C1",10,style=style2 )
-    g1.add_top_port(rt_b, "C2", "C2",50,style=style2 )
-    g1.add_bottom_port(rt_b, "D1", "D1",10,style=style2 )
-    g1.add_bottom_port(rt_b, "D2", "D2",50,style=style2 )
+    g1.add_right_port(rt_b, "A1", 10,style=style2 )
+    g1.add_right_port(rt_b, "A2", 50,style=style2 )
+    g1.add_left_port(rt_b, "B1", 10, style=style2 )
+    g1.add_left_port(rt_b, "B2", 50, style=style2 )
+    g1.add_top_port(rt_b, "C1", 10,style=style2 )
+    g1.add_top_port(rt_b, "C2", 50,style=style2 )
+    g1.add_bottom_port(rt_b, "D1", 10,style=style2 )
+    g1.add_bottom_port(rt_b, "D2", 50,style=style2 )
 
 
     edge_style3 = { 'edgeStyle': 'orthogonalEdgeStyle', 'curved': '0', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' , 'jumpStyle' : 'arc'}

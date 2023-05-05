@@ -169,23 +169,23 @@ def create_write_drawio4():
     style2 = { 'shape':'rectangle', 'whiteSpace': 'wrap', 'html': '1'  }
    
     g1.port_size = 30
-    g1.add_right_port(rt_a, "A1", "A1",10,style=style2 )
-    g1.add_right_port(rt_a, "A2", "A2",50,style=style2 )
-    g1.add_left_port(rt_a, "B1", "B1",10, style=style2 )
-    g1.add_left_port(rt_a, "B2", "B2",50, style=style2 )
-    g1.add_top_port(rt_a, "C1", "C1",10,style=style2 )
-    g1.add_top_port(rt_a, "C2", "C2",50,style=style2 )
-    g1.add_bottom_port(rt_a, "D1", "D1",10,style=style2 )
-    g1.add_bottom_port(rt_a, "D2", "D2",50,style=style2 )
+    g1.add_right_port(rt_a, "A1", 10,style=style2 )
+    g1.add_right_port(rt_a, "A2", 50,style=style2 )
+    g1.add_left_port(rt_a, "B1", 10, style=style2 )
+    g1.add_left_port(rt_a, "B2", 50, style=style2 )
+    g1.add_top_port(rt_a, "C1", 10,style=style2 )
+    g1.add_top_port(rt_a, "C2", 50,style=style2 )
+    g1.add_bottom_port(rt_a, "D1", 10,style=style2 )
+    g1.add_bottom_port(rt_a, "D2", 50,style=style2 )
 
-    g1.add_right_port(rt_b, "A1", "A1",10,style=style2 )
-    g1.add_right_port(rt_b, "A2", "A2",50,style=style2 )
-    g1.add_left_port(rt_b, "B1", "B1",10, style=style2 )
-    g1.add_left_port(rt_b, "B2", "B2",50, style=style2 )
-    g1.add_top_port(rt_b, "C1", "C1",10,style=style2 )
-    g1.add_top_port(rt_b, "C2", "C2",50,style=style2 )
-    g1.add_bottom_port(rt_b, "D1", "D1",10,style=style2 )
-    g1.add_bottom_port(rt_b, "D2", "D2",50,style=style2 )
+    g1.add_right_port(rt_b, "A1", 10,style=style2 )
+    g1.add_right_port(rt_b, "A2", 50,style=style2 )
+    g1.add_left_port(rt_b, "B1", 10, style=style2 )
+    g1.add_left_port(rt_b, "B2", 50, style=style2 )
+    g1.add_top_port(rt_b, "C1", 10,style=style2 )
+    g1.add_top_port(rt_b, "C2", 50,style=style2 )
+    g1.add_bottom_port(rt_b, "D1", 10,style=style2 )
+    g1.add_bottom_port(rt_b, "D2", 50,style=style2 )
 
 
     edge_style3 = { 'edgeStyle': 'orthogonalEdgeStyle', 'curved': '0', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' , 'jumpStyle' : 'arc'}
@@ -226,6 +226,58 @@ def create_write_drawio4():
     XET.indent(tree, space='  ')
     tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
 
+def ip_network_drawio():
+    g2 =  mxgraph.mxgraph.MxGraph(diagram_id='idunno-2')
+    parent = g2.create_group_cell(cell_id='1', parent=g2.root)
+    #style = { 'ellipse': None, 'whiteSpace': 'wrap', 'html': '1', 'aspect': 'fixed' }
+    router_style = { 'shape': "ellipse", 'strokeWidth' :'3','whiteSpace': 'wrap', 'html': '1', 'aspect': 'fixed' }
+    router1 = g2.insert_vertex(parent=parent, value="VRF\n10", x=400, y=50, width=60, height=60, style=router_style, relative=False)
+    router2 = g2.insert_vertex(parent=parent, value="VRF\n20", x=500, y=400, width=60, height=60, style=router_style, relative=False)
+
+    style1 = { 'shape': "ellipse", 'whiteSpace': 'wrap', 'html': '1', 'aspect': 'fixed' }
+    subnet1 = g2.insert_vertex(parent=parent, value="10.100.2.0 /24", x=100, y=200, width=180, height=50, style=style1, relative=False)
+    subnet2 = g2.insert_vertex(parent=parent, value="10.100.3.0 /24", x=600, y=200, width=180, height=50, style=style1, relative=False)
+    subnet3 = g2.insert_vertex(parent=parent, value="10.100.3.0 /24", x=100, y=600, width=180, height=50, style=style1, relative=False)
+    subnet4 = g2.insert_vertex(parent=parent, value="10.100.3.0 /24", x=400, y=600, width=180, height=50, style=style1, relative=False)
+    subnet5 = g2.insert_vertex(parent=parent, value="10.100.3.0 /24", x=700, y=600, width=180, height=50, style=style1, relative=False)
+
+    ## straight
+    edge_style1 = { 'edgeStyle': 'none', 'endArrow': 'none','curved': '1', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' }
+    ## curved
+    edge_style2 = { 'edgeStyle': 'orthogonalEdgeStyle', 'curved': '1', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' }
+    ## bending
+    edge_style3 = { 'edgeStyle': 'orthogonalEdgeStyle', 'curved': '0', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' , 'jumpStyle' : 'arc'}
+
+    edge = g2.insert_edge(parent=parent, source=router1, target=subnet1,  style=edge_style1)
+    g2.set_edge_src_label(edge, "100.1", style={'labelBackgroundColor' : "#ffffff"} )
+    edge = g2.insert_edge(parent=parent, source=router1, target=subnet2,  style=edge_style1)
+    g2.set_edge_src_label(edge, "200.1", style={'labelBackgroundColor' : "#ffffff"} )
+
+    edge = g2.insert_edge(parent=parent, source=router2, target=subnet2,  style=edge_style1)
+    g2.set_edge_src_label(edge, "200.254", style={'labelBackgroundColor' : "#ffffff"} )
+
+    edge = g2.insert_edge(parent=parent, source=router2, target=subnet3,  style=edge_style1)
+    g2.set_edge_src_label(edge, "300.1", style={'labelBackgroundColor' : "#ffffff"} )
+    edge = g2.insert_edge(parent=parent, source=router2, target=subnet4,  style=edge_style1)
+    g2.set_edge_src_label(edge, "400.1", style={'labelBackgroundColor' : "#ffffff"} )
+    edge = g2.insert_edge(parent=parent, source=router2, target=subnet5,  style=edge_style1)
+    g2.set_edge_src_label(edge, "500.1", style={'labelBackgroundColor' : "#ffffff"} )
+
+    #g2.set_edge_src_label(edge, "G1/1/1", style={'labelBackgroundColor' : "#ffffff"} )
+    #g2.set_edge_dst_label(edge, "E1/1/1", style={'labelBackgroundColor' : "#ffffff"} )
+
+    f = open("/var/tmp/test.xml","w")
+    #mxgraph.mxgraph.multi_graph_to_file([g1, g2], f)
+
+    gdict = { "ip-network" : g2}
+    mxgraph.mxgraph.multi_graphdict_to_file(gdict, f)
+
+    f.close()
+    tree = XET.parse("/var/tmp/test.xml")
+    XET.indent(tree, space='  ')
+    tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
+
+
 def xtest_read_file():
     #mx = mxgraph.mxgraph.MxGraphModel()
     mx = mxgraph.mxgraph.MxGraph()
@@ -240,7 +292,9 @@ def main():
     #create_write_drawio()
     #create_write_drawio2()
     #create_write_drawio3()
-    create_write_drawio4()
+    #create_write_drawio4()
+    ip_network_drawio()
+
 
     #print("#create_compress_write_drawio()")
     #create_compress_write_drawio()
