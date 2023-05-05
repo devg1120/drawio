@@ -74,8 +74,6 @@ class CellStore(MutableMapping):
     def add_cell(self, cell):
         """Adds the cell cell to the store. It is stored under its cell_id."""
         self.cells[cell.cell_id] = cell
-    def get_cell(self, cell_id):
-        return self.cells[cell_id] 
 
 
 
@@ -204,19 +202,20 @@ class MxGeometry(MxBase):
         #    array.extend([p.to_xml() for p in self.points])
         if self.points:
             if len(self.points) == 1:
-                #print("point")
+                print("point")
                 p = ET.SubElement(geom, 'mxPoint')
                 p.set('as','offset')
                 p.set('x',str(self.points[0].x))
                 p.set('y',str(self.points[0].y))
             if len(self.points) > 1:
-                #print("points")
+                print("points")
                 array = ET.SubElement(geom, 'Array')
                 array.set('as','points')
                 array.extend([p.to_xml() for p in self.points])
 
+        print("pass")
         if self.point:
-            #print("point")
+            print("point")
             p = ET.SubElement(geom, 'MxPoint')
             p.set('as','offset')
             p.set('x',self.point.x)
@@ -250,11 +249,6 @@ class MxCell(MxBase):
         self._target_id = None
         self._value = value                 #GS
         self.attrs.update(kwargs)
-
-        self.right_port_count = 0
-        self.left_port_count = 0
-        self.top_port_count = 0
-        self.bottom_port_count = 0
 
     @property
     def parent(self):
@@ -387,7 +381,6 @@ class MxGraph:
         self.cells.add_cell(self.root)
         self.diagram_id = diagram_id
         self.cells.prefix = self.diagram_id
-        self.port_size = 50
 
     def _get_parent(self, parent):
         if parent is None:
@@ -444,9 +437,9 @@ class MxGraph:
         return cell
 
     def set_edge_src_label(self, parent, label, style={}):
-        #print(parent.cell_id)
+        print(parent.cell_id)
         cell_id = parent.cell_id + "-edge_src_label"
-        #print(cell_id)
+        print(cell_id)
         cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
         cell.geometry = MxGeometry( x="-0.8" ,relative=True)
         cell.style = MxStyle(**style)
@@ -455,9 +448,9 @@ class MxGraph:
         return cell
         
     def set_edge_dst_label(self, parent, label, style={}):
-        #print(parent.cell_id)
+        print(parent.cell_id)
         cell_id = parent.cell_id + "-edge_dst_label"
-        #print(cell_id)
+        print(cell_id)
         cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
         cell.geometry = MxGeometry( x="0.8" ,relative=True)
         cell.style = MxStyle(**style)
@@ -465,84 +458,70 @@ class MxGraph:
         self.cells.add_cell(cell)
         return cell
 
-    def add_right_port(self, parent, label, offset_y, style={}):
-        parent.right_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.right_port_count
-        #cell_id = parent.cell_id + "-right_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
+    def add_right_port(self, parent, label, style={}):
+        print(label)
+        print(parent.cell_id)
+        no = 1
+        cell_id = parent.cell_id + "-right_port" + str(no)
+        print(cell_id)
         x = parent.geometry.width
-        h = parent.geometry.height
-        n = parent.right_port_count
-        #print(x)
-
+        print(x)
         cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        #point_ = MxPoint(None,30)
-        point_ = MxPoint(None,offset_y)
-        cell.geometry = MxGeometry( x=1, width=self.port_size, height=self.port_size, relative=True)
+        point_ = MxPoint(None,30)
+        cell.geometry = MxGeometry( x=1, width=50, height=50, relative=True)
         cell.geometry.points = [ point_ ]
         cell.style = MxStyle(**style)
         cell.parent = parent
         self.cells.add_cell(cell)
         return cell
     
-    def add_left_port(self, parent, label, offset_y, style={}):
-        parent.left_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.left_port_count
-        #cell_id = parent.cell_id + "-left_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
+    def add_left_port(self, parent, label, style={}):
+        print(label)
+        print(parent.cell_id)
+        no = 1
+        cell_id = parent.cell_id + "-left_port" + str(no)
+        print(cell_id)
         x = parent.geometry.width
-        #print(x)
+        print(x)
         cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        #point_ = MxPoint(-50,30)
-        point_ = MxPoint(-self.port_size,offset_y)
-        cell.geometry = MxGeometry( width=self.port_size, height=self.port_size, relative=True)
+        point_ = MxPoint(-50,30)
+        cell.geometry = MxGeometry( width=50, height=50, relative=True)
         cell.geometry.points = [ point_ ]
         cell.style = MxStyle(**style)
         cell.parent = parent
         self.cells.add_cell(cell)
         return cell
 
-    def add_top_port(self, parent, label, offset_x, style={}):
-        parent.top_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.top_port_count
-        #cell_id = parent.cell_id + "-top_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
+    def add_top_port(self, parent, label, style={}):
+        print(label)
+        print(parent.cell_id)
+        no = 1
+        cell_id = parent.cell_id + "-top_port" + str(no)
+        print(cell_id)
         x = parent.geometry.width
-        #print(x)
+        print(x)
         cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        #point_ = MxPoint(30,-50)
-        point_ = MxPoint(offset_x,-self.port_size)
-        cell.geometry = MxGeometry( width=self.port_size, height=self.port_size, relative=True)
+        point_ = MxPoint(30,-50)
+        cell.geometry = MxGeometry( width=50, height=50, relative=True)
         cell.geometry.points = [ point_ ]
         cell.style = MxStyle(**style)
         cell.parent = parent
         self.cells.add_cell(cell)
         return cell
 
-    def add_bottom_port(self, parent, label, offset_x,style={}):
-        parent.bottom_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.bottom_port_count
-        #cell_id = parent.cell_id + "-bottom_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
+    def add_bottom_port(self, parent, label, style={}):
+        print(label)
+        print(parent.cell_id)
+        no = 1
+        cell_id = parent.cell_id + "-bottom_port" + str(no)
+        print(cell_id)
         x = parent.geometry.width
         h = parent.geometry.height
-        #print(x)
-        #print(h)
+        print(x)
+        print(h)
         cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        point_ = MxPoint(offset_x, None )
-        cell.geometry = MxGeometry( y=1, width=self.port_size, height=self.port_size, relative=True)
+        point_ = MxPoint(30, None )
+        cell.geometry = MxGeometry( y=1, width=50, height=50, relative=True)
         cell.geometry.points = [ point_ ]
         cell.style = MxStyle(**style)
         cell.parent = parent

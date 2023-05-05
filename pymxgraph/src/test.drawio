@@ -1,1 +1,103 @@
-<mxfile host="py-mxgraph"><diagram id="idunno" name="Page-1">1VJLDoMgFDwNywYUT6A2rrrqCYi+CokIQVr19n0G7L9Nu+yC5M0Mb5hMILzQU+WElTvTQEf4lvDCGePDpKcCuo6kTDWElyRNGR6E9I2cBNkKB73/akM1x743G/a8GL0GP3cQGNxUdkCQj1J52FtRL8qI8ZGTXmP+MsFRDBbqxeagJsCH8mB1AudhunGPkSowGryb8YoYgtxeqGVRgmpljMVZzDqqxsvAZSu3mq94Djhl9y3QWMPHSl50+ceVZL9UQq8/kD58zzM=</diagram></mxfile>
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="py-mxgraph">
+  <diagram id="idunno" name="Page-1">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ROUTER_A" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" value="ROUTER_A" vertex="1">
+          <mxGeometry x="200" y="200" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ROUTER_B" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" value="ROUTER_B" vertex="1">
+          <mxGeometry x="700" y="400" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ROUTER_A-A1" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="A1" vertex="1">
+          <mxGeometry x="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="None" y="10" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-A2" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="A2" vertex="1">
+          <mxGeometry x="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="None" y="50" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-B1" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="B1" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="-30" y="10" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-B2" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="B2" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="-30" y="50" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-C1" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="C1" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="-30" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-C2" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="C2" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="50" y="-30" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-D1" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="D1" vertex="1">
+          <mxGeometry y="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="None" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_A-D2" parent="ROUTER_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="D2" vertex="1">
+          <mxGeometry y="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="50" y="None" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-A1" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="A1" vertex="1">
+          <mxGeometry x="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="None" y="10" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-A2" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="A2" vertex="1">
+          <mxGeometry x="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="None" y="50" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-B1" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="B1" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="-30" y="10" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-B2" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="B2" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="-30" y="50" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-C1" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="C1" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="-30" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-C2" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="C2" vertex="1">
+          <mxGeometry width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="50" y="-30" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-D1" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="D1" vertex="1">
+          <mxGeometry y="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="None" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ROUTER_B-D2" parent="ROUTER_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="D2" vertex="1">
+          <mxGeometry y="1" width="30" height="30" relative="1" as="geometry">
+            <mxPoint as="offset" x="50" y="None" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="idunno-0" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" source="ROUTER_A-A1" target="ROUTER_B-C1" value="TEST1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-1" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" source="ROUTER_A-A2" target="ROUTER_B-C2" value="TEST2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

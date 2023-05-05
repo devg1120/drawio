@@ -74,8 +74,6 @@ class CellStore(MutableMapping):
     def add_cell(self, cell):
         """Adds the cell cell to the store. It is stored under its cell_id."""
         self.cells[cell.cell_id] = cell
-    def get_cell(self, cell_id):
-        return self.cells[cell_id] 
 
 
 
@@ -140,10 +138,8 @@ class MxPoint(MxBase):
 
     def to_xml(self):
         point_xml = ET.Element('mxPoint')
-        if self.x :
-          point_xml.set('x', str(self.x))
-        if self.y :
-          point_xml.set('y', str(self.y))
+        point_xml.set('x', str(self.x))
+        point_xml.set('y', str(self.y))
         return point_xml
 
 class MxGeometry(MxBase):
@@ -151,7 +147,7 @@ class MxGeometry(MxBase):
     https://jgraph.github.io/mxgraph/docs/js-api/files/model/mxGeometry-js.html
     """
 
-    def __init__(self, x=None, y=None, width=None, height=None, relative=False ):
+    def __init__(self, x=None, y=None, width=None, height=None, relative=False):
         super().__init__()
         self.x = x
         self.y = y
@@ -159,7 +155,6 @@ class MxGeometry(MxBase):
         self.height = height
         self.relative = relative
         self.points = []
-        self.point = None
         self.source_point = None
         self.target_point = None
 
@@ -197,30 +192,10 @@ class MxGeometry(MxBase):
             sp_xml = self.target_point.to_xml()
             sp_xml.set('as', 'targetPoint')
             geom.append(sp_xml)
-        #if self.points:
-        #    print("points")
-        #    array = ET.SubElement(geom, 'Array')
-        #    array.set('as','points')
-        #    array.extend([p.to_xml() for p in self.points])
         if self.points:
-            if len(self.points) == 1:
-                #print("point")
-                p = ET.SubElement(geom, 'mxPoint')
-                p.set('as','offset')
-                p.set('x',str(self.points[0].x))
-                p.set('y',str(self.points[0].y))
-            if len(self.points) > 1:
-                #print("points")
-                array = ET.SubElement(geom, 'Array')
-                array.set('as','points')
-                array.extend([p.to_xml() for p in self.points])
-
-        if self.point:
-            #print("point")
-            p = ET.SubElement(geom, 'MxPoint')
-            p.set('as','offset')
-            p.set('x',self.point.x)
-            p.set('y',self.point.y)
+            array = ET.SubElement(geom, 'Array')
+            array.set('as','points')
+            array.extend([p.to_xml() for p in self.points])
         return geom
 
 class MxCell(MxBase):
@@ -250,11 +225,6 @@ class MxCell(MxBase):
         self._target_id = None
         self._value = value                 #GS
         self.attrs.update(kwargs)
-
-        self.right_port_count = 0
-        self.left_port_count = 0
-        self.top_port_count = 0
-        self.bottom_port_count = 0
 
     @property
     def parent(self):
@@ -387,7 +357,6 @@ class MxGraph:
         self.cells.add_cell(self.root)
         self.diagram_id = diagram_id
         self.cells.prefix = self.diagram_id
-        self.port_size = 50
 
     def _get_parent(self, parent):
         if parent is None:
@@ -424,10 +393,7 @@ class MxGraph:
 
     def insert_edge(self, parent=None, cell_id=None, value=None, source=None, target=None, style={}):
         """Insert an edge cell to the graph, having parent parent, cell identifier cell_id and other attributes
-        as described in https://jgraph.github.io/mxgraph/docs/js-api/files/view/mxGraph-js.html#mxGraph.insertEdge
-        straight-line
-        bending-line
-        """
+        as described in https://jgraph.github.io/mxgraph/docs/js-api/files/view/mxGraph-js.html#mxGraph.insertEdge"""
         parent = self._get_parent(parent)
         cell_id = self._get_cell_id(cell_id)
         cell = MxCell(self.cells, cell_id, edge=True, value=value)  #GS
@@ -438,112 +404,6 @@ class MxGraph:
         cell.geometry = MxGeometry(relative=True)
         cell.source = source
         cell.target = target
-        cell.style = MxStyle(**style)
-        cell.parent = parent
-        self.cells.add_cell(cell)
-        return cell
-
-    def set_edge_src_label(self, parent, label, style={}):
-        #print(parent.cell_id)
-        cell_id = parent.cell_id + "-edge_src_label"
-        #print(cell_id)
-        cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        cell.geometry = MxGeometry( x="-0.8" ,relative=True)
-        cell.style = MxStyle(**style)
-        cell.parent = parent
-        self.cells.add_cell(cell)
-        return cell
-        
-    def set_edge_dst_label(self, parent, label, style={}):
-        #print(parent.cell_id)
-        cell_id = parent.cell_id + "-edge_dst_label"
-        #print(cell_id)
-        cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        cell.geometry = MxGeometry( x="0.8" ,relative=True)
-        cell.style = MxStyle(**style)
-        cell.parent = parent
-        self.cells.add_cell(cell)
-        return cell
-
-    def add_right_port(self, parent, label, offset_y, style={}):
-        parent.right_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.right_port_count
-        #cell_id = parent.cell_id + "-right_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
-        x = parent.geometry.width
-        h = parent.geometry.height
-        n = parent.right_port_count
-        #print(x)
-
-        cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        #point_ = MxPoint(None,30)
-        point_ = MxPoint(None,offset_y)
-        cell.geometry = MxGeometry( x=1, width=self.port_size, height=self.port_size, relative=True)
-        cell.geometry.points = [ point_ ]
-        cell.style = MxStyle(**style)
-        cell.parent = parent
-        self.cells.add_cell(cell)
-        return cell
-    
-    def add_left_port(self, parent, label, offset_y, style={}):
-        parent.left_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.left_port_count
-        #cell_id = parent.cell_id + "-left_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
-        x = parent.geometry.width
-        #print(x)
-        cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        #point_ = MxPoint(-50,30)
-        point_ = MxPoint(-self.port_size,offset_y)
-        cell.geometry = MxGeometry( width=self.port_size, height=self.port_size, relative=True)
-        cell.geometry.points = [ point_ ]
-        cell.style = MxStyle(**style)
-        cell.parent = parent
-        self.cells.add_cell(cell)
-        return cell
-
-    def add_top_port(self, parent, label, offset_x, style={}):
-        parent.top_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.top_port_count
-        #cell_id = parent.cell_id + "-top_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
-        x = parent.geometry.width
-        #print(x)
-        cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        #point_ = MxPoint(30,-50)
-        point_ = MxPoint(offset_x,-self.port_size)
-        cell.geometry = MxGeometry( width=self.port_size, height=self.port_size, relative=True)
-        cell.geometry.points = [ point_ ]
-        cell.style = MxStyle(**style)
-        cell.parent = parent
-        self.cells.add_cell(cell)
-        return cell
-
-    def add_bottom_port(self, parent, label, offset_x,style={}):
-        parent.bottom_port_count +=1
-        #print(label)
-        #print(parent.cell_id)
-        no = parent.bottom_port_count
-        #cell_id = parent.cell_id + "-bottom_port" + str(no)
-        cell_id = parent.cell_id + "-" + label
-        #print(cell_id)
-        x = parent.geometry.width
-        h = parent.geometry.height
-        #print(x)
-        #print(h)
-        cell = MxCell(self.cells, cell_id, vertex=True, value=label )  #GS
-        point_ = MxPoint(offset_x, None )
-        cell.geometry = MxGeometry( y=1, width=self.port_size, height=self.port_size, relative=True)
-        cell.geometry.points = [ point_ ]
         cell.style = MxStyle(**style)
         cell.parent = parent
         self.cells.add_cell(cell)
@@ -613,7 +473,7 @@ class MxGraph:
         # mxfile_xml.set('type', 'device')
         mxfile_xml.append(diagram_xml)
         # TODO: dump to file f, not stdout
-        #ET.dump(mxfile_xml)
+        # ET.dump(mxfile_xml)
         f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
 
 

@@ -452,11 +452,11 @@ def create_write_drawio():
     style = { 'ellipse': None, 'whiteSpace': 'wrap', 'html': '1', 'aspect': 'fixed' }
     source_vertex = g.insert_vertex(parent=parent, value="Hello!", x=100, y=200, width=400, height=300, style=style, relative=False)
     target_vertex = g.insert_vertex(parent=parent, value="Goodbye!", x=400, y=200, width=400, height=300, style=style, relative=False)
-    # edge_style = { 'edgeStyle': 'none', 'curved': '1', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' }
-    # edge = g.insert_edge(parent=parent, source=source_vertex, target=target_vertex, style=edge_style)
-    # g.add_edge_geometry(edge, [(10,20),(30,40)])
-    # g.set_source_point(edge, (50,60))
-    # g.set_target_point(edge, (70,80))
+     edge_style = { 'edgeStyle': 'none', 'curved': '1', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' }
+     edge = g.insert_edge(parent=parent, source=source_vertex, target=target_vertex, style=edge_style)
+     g.add_edge_geometry(edge, [(10,20),(30,40)])
+     g.set_source_point(edge, (50,60))
+     g.set_target_point(edge, (70,80))
     # ET.dump(g.mxgraph_model.to_xml(g.cells))
     g.to_file(sys.stdout)
 

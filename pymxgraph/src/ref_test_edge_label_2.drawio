@@ -1,0 +1,29 @@
+<mxfile host="app.diagrams.net" modified="2023-05-04T15:23:43.064Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" version="21.2.7" etag="ViFLK3YPrP2-hLEsZwuN" type="device">
+  <diagram id="idunno" name="Page-1">
+    <mxGraphModel dx="922" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="idunno-0" value="Hello!" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="100" y="200" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-1" value="Goodbye!" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="430" y="280" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-2" value="TEST" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="idunno-0" target="idunno-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="src" value="Gi1/1" style="labelBackgroundColor=#ffffff;;" parent="idunno-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dst" value="G000" style="labelBackgroundColor=#ffffff;;" parent="idunno-2" vertex="1" connectable="0">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
