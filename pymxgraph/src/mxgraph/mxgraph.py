@@ -617,4 +617,35 @@ class MxGraph:
         f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
 
 
+def multi_graph_to_file( graphs , f):
+        mxfile_xml = ET.Element('mxfile')
+        mxfile_xml.set('host', 'py-mxgraph')
+        count = 0
+        for g in graphs:
+           count += 1
+           diagram_xml = ET.Element('diagram')
+           diagram_xml.set('id', g.diagram_id)
+           diagram_xml.set('name', 'Page-' + str(count))
+           graph_xml = g.mxgraph_model.to_xml(g.cells)
+           diagram_xml.append(graph_xml)
+           mxfile_xml.append(diagram_xml)
+
+        f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
+
+def multi_graphdict_to_file( graphdict , f):
+        mxfile_xml = ET.Element('mxfile')
+        mxfile_xml.set('host', 'py-mxgraph')
+        count = 0
+        for k in graphdict:
+           count += 1
+           g = graphdict[k]
+           diagram_xml = ET.Element('diagram')
+           diagram_xml.set('id', g.diagram_id)
+           #diagram_xml.set('name', 'Page-' + str(count))
+           diagram_xml.set('name', k )
+           graph_xml = g.mxgraph_model.to_xml(g.cells)
+           diagram_xml.append(graph_xml)
+           mxfile_xml.append(diagram_xml)
+
+        f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
 
