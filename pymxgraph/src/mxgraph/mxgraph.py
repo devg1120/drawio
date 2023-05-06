@@ -15,6 +15,10 @@ def int_or_none(a):
         return a
     return int(a)
 
+def float_or_none(a):
+    if a is None:
+        return a
+    return float(a)
 
 def parse_style_string(s):
     def trysplit(x):
@@ -167,10 +171,14 @@ class MxGeometry(MxBase):
     @classmethod
     def from_xml(cls, cell_store, xml_element):
         geom = MxGeometry(
-                int_or_none(xml_element.get('x')),
-                int_or_none(xml_element.get('y')),
-                int_or_none(xml_element.get('width')),
-                int_or_none(xml_element.get('height')),
+                #int_or_none(xml_element.get('x')),
+                #int_or_none(xml_element.get('y')),
+                #int_or_none(xml_element.get('width')),
+                #int_or_none(xml_element.get('height')),
+                float_or_none(xml_element.get('x')),
+                float_or_none(xml_element.get('y')),
+                float_or_none(xml_element.get('width')),
+                float_or_none(xml_element.get('height')),
                 xml_element.get('relative') == '1')
         points = [ MxPoint.from_xml(cell_store, p) for p in xml_element.findall('Array/mxPoint') ]
         geom.points = points
@@ -363,9 +371,13 @@ class MxGraphModel(MxBase):
 
     @classmethod
     def from_xml(cls, cell_store, xml_element):
+        print("---- from_xml")
+        print(ET.dump(xml_element))
         gm = MxGraphModel()
         gm.attrs = dict(xml_element.items())
-        for x in xml_element.findall('root/mxCell'):
+        for x in xml_element.findall('.//root/mxCell'):
+        #for x in xml_element.findall('root/mxCell'):
+            print(x)
             cell_store.add_cell(MxCell.from_xml(cell_store, x))
         return gm
 
@@ -568,7 +580,7 @@ class MxGraph:
         edge.geometry.target_point = MxPoint(*point)
 
     @classmethod
-    def from_file(cls, f):
+    def from_file_compress(cls, f):
         g = MxGraph()
         et = dxml.parse(f)
         root = et.getroot()
@@ -578,6 +590,35 @@ class MxGraph:
         t = urllib.parse.unquote(zlib.decompress(base64.b64decode(diagram.text), -zlib.MAX_WBITS).decode("utf-8"))
         graph_xml = dxml.fromstring(t)
         g.mxgraph_model = MxGraphModel.from_xml(g.cells, graph_xml)
+        return g
+
+    def from_file(self, f):
+        g = MxGraph()
+        et = dxml.parse(f)
+        root = et.getroot()
+        diagram = root.find('diagram')
+        g.diagram_id = diagram.get('id')
+        print(g.diagram_id)
+        g.cells.prefix = g.diagram_id
+        #graph = diagram.find('mxGraphModel/root')
+        #print(ET.dump(diagram))
+        g.mxgraph_model = MxGraphModel.from_xml(g.cells, diagram)
+        return g
+
+    def from_file_getbyid(self, f, _id):
+        g = MxGraph()
+        et = dxml.parse(f)
+        root = et.getroot()
+        lists = root.findall('.//diagram')
+        for diagram in lists:
+            if _id == diagram.get('id'):
+                g.diagram_id = diagram.get('id')
+                print(g.diagram_id)
+                g.cells.prefix = g.diagram_id
+                graph_xml = diagram
+                print(graph_xml)
+                g.mxgraph_model = MxGraphModel.from_xml(g.cells, graph_xml)
+                return g
         return g
 
     def to_file_compress(self, f):
