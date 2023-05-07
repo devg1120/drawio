@@ -9,6 +9,12 @@ import xml.etree.ElementTree as ET
 # https://docs.python.org/ja/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree
 
 from collections.abc import MutableMapping
+from enum import Enum
+
+class Vertex(Enum):
+    NODE = 1
+    PORT = 2
+    ETC  = 3
 
 def int_or_none(a):
     if a is None:
@@ -237,7 +243,8 @@ class MxCell(MxBase):
     https://jgraph.github.io/mxgraph/docs/js-api/files/model/mxCell-js.html
     """
 
-    def __init__(self, cell_store, cell_id, vertex=False, edge=False, value=None,**kwargs):
+    #def __init__(self, cell_store, cell_id, vertex=False, edge=False, value=None,**kwargs):
+    def __init__(self, cell_store, cell_id, vertex=False, vertex_type=Vertex.ETC, edge=False, value=None,**kwargs):
         """cell_store is a CellStore object that we use to keep track of which cells
         are defined. This constructor does not add the cell to cell_store, you will
         need to do that yourself. Use the vertex or edge parameters to mark this cell
@@ -252,6 +259,7 @@ class MxCell(MxBase):
         self.geometry = None
         self.style = None
         self.vertex = vertex
+        self.vertex_type = vertex_type
         self.edge = edge
         # self.connectable = False
         # self.collapsed = False
@@ -265,6 +273,8 @@ class MxCell(MxBase):
         self.top_port_count = 0
         self.bottom_port_count = 0
 
+    def value(self):
+        return self._value
     @property
     def parent(self):
         """Returns the cell's parent cell, and None if this is
@@ -293,6 +303,7 @@ class MxCell(MxBase):
             cell = MxCell(cell_store, xml_element.get('id'))
         cell.cell_id = xml_element.get('id')
         cell._parent_id = xml_element.get('parent')
+        cell._value = xml_element.get('value')
         cell.attrs = dict(xml_element.items())
         
         if xml_element.get('style') is not None:
@@ -305,6 +316,7 @@ class MxCell(MxBase):
         if xml_element.get('target') is not None:
             cell._target_id = xml_element.get('target')
         cell.vertex = xml_element.get('vertex') == '1'
+        cell.vertex_type = xml_element.get('vertex_type')
         cell.edge = xml_element.get('edge') == '1'
         return cell
 
@@ -328,6 +340,8 @@ class MxCell(MxBase):
             cell_xml.append(geom_xml)
         if self.vertex:
             cell_xml.set('vertex', '1')
+        if self.vertex_type:
+            cell_xml.set('vertex_type', str(self.vertex_type))
         if self.edge:
             cell_xml.set('edge', '1')
         return cell_xml
@@ -372,7 +386,7 @@ class MxGraphModel(MxBase):
     @classmethod
     def from_xml(cls, cell_store, xml_element):
         #print("---- from_xml")
-        print(ET.dump(xml_element))
+        #print(ET.dump(xml_element))
         gm = MxGraphModel()
         gm.attrs = dict(xml_element.items())
         for x in xml_element.findall('.//root/mxCell'):
@@ -422,12 +436,13 @@ class MxGraph:
         self.cells.add_cell(cell)
         return cell
 
-    def insert_vertex(self, parent = None, cell_id = None, value = None, x = None, y = None, width = None, height = None, style = {}, relative = False):
+    #def insert_vertex(self, parent = None, cell_id = None, value = None, x = None, y = None, width = None, height = None, style = {}, relative = False):
+    def insert_vertex(self, parent = None, cell_id = None, value = None, x = None, y = None, width = None, height = None, vertex_type = Vertex.ETC, style = {}, relative = False):
         """Insert a vertex cell to the graph, having parent parent, cell identifier cell_id and other attributes
         as described in https://jgraph.github.io/mxgraph/docs/js-api/files/view/mxGraph-js.html#mxGraph.insertVertex"""
         parent = self._get_parent(parent)
         cell_id = self._get_cell_id(cell_id)
-        cell = MxCell(self.cells, cell_id, vertex=True, value=value) #GS
+        cell = MxCell(self.cells, cell_id, vertex=True, vertex_type = vertex_type, value=value) #GS
         cell.style = MxStyle(**style)
         cell.geometry = MxGeometry(x=x, y=y, width=width, height=height, relative=relative)
         cell.parent = parent
@@ -616,7 +631,7 @@ class MxGraph:
                 g.cells.prefix = g.diagram_id
                 graph_xml = diagram
                 #print(graph_xml)
-                print(ET.dump(graph_xml))
+                #print(ET.dump(graph_xml))
                 g.mxgraph_model = MxGraphModel.from_xml(g.cells, graph_xml)
                 return g
         return g

@@ -605,22 +605,47 @@ def xtest_read_file():
     mx.from_file("test.drawio")
     mx.to_file(sys.stdout)
 
-def dump_geometry():
+def dump_geometry(filename):
     #mx = mxgraph.mxgraph.MxGraphModel()
     mx = mxgraph.mxgraph.MxGraph()
-    f = open("test.drawio","r")
+    f = open(filename,"r")
     #g = mx.from_file(f )
-    g = mx.from_file_getbyid(f, "phy-network")
+    g = mx.from_file_getbyid(f, "phy-network-layout")
     #print(g.diagram_id)
     #print(XET.dump(g.mxgraph_model.to_xml(g.cells)))
-    print("----cells----")
-    for cell in g.cells:
-        print(cell)
-    #mx.to_file(sys.stdout)
 
+    #print("----cells----")
+    #for cell in g.cells:
+    #    if g.cells[cell].vertex:
+    #        print("vertex", end=" ")
+    #        print(cell)
+    #        print(g.cells[cell].vertex_type)
+    #    elif g.cells[cell].edge:
+    #        print("edge  ", end=" ")
+    #        print(cell)
+    #    else:
+    #        print("***   ", end=" ")
+    #        print(cell)
+    #print("----end cells----")
+            
+    w = open("." + filename ,"w")
+    for cell in g.cells:
+        if g.cells[cell].vertex and g.cells[cell].vertex_type == 'Vertex.NODE':
+           #print(g.cells[cell].value())
+           print(g.cells[cell]._value, end=",", file=w)
+           geo = g.cells[cell].geometry
+           print(geo.x, end=",", file=w)
+           print(geo.y, end=",", file=w)
+           print(geo.width, end=",", file=w)
+           print(geo.height, end=",", file=w)
+           print("", file=w)
+
+    #mx.to_file(sys.stdout)
+    w.close()
+    f.close()
 def main():
 
-    dump_geometry()
+    dump_geometry("test.drawio")
     #g1 = ip_network_drawio()
     #g2 = phy_network_drawio()
     #g3 = phy_network_layout()

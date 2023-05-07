@@ -507,7 +507,7 @@ def phy_network_layout():
         w        = v[3]
         h        = v[4]
         #print(hostname)
-        vt = g2.insert_vertex(parent=parent, value=hostname, x=x , y=y, width=w , height=h , style=sw_style, relative=False)
+        vt = g2.insert_vertex(parent=parent, value=hostname, x=x , y=y, width=w , height=h , vertex_type=mxgraph.mxgraph.Vertex.NODE ,style=sw_style, relative=False)
         vdict[hostname] = vt
     #print(vdict)
     for e in elist:
