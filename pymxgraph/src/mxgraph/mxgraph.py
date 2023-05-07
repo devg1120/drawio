@@ -371,13 +371,12 @@ class MxGraphModel(MxBase):
 
     @classmethod
     def from_xml(cls, cell_store, xml_element):
-        print("---- from_xml")
+        #print("---- from_xml")
         print(ET.dump(xml_element))
         gm = MxGraphModel()
         gm.attrs = dict(xml_element.items())
         for x in xml_element.findall('.//root/mxCell'):
         #for x in xml_element.findall('root/mxCell'):
-            print(x)
             cell_store.add_cell(MxCell.from_xml(cell_store, x))
         return gm
 
@@ -613,10 +612,11 @@ class MxGraph:
         for diagram in lists:
             if _id == diagram.get('id'):
                 g.diagram_id = diagram.get('id')
-                print(g.diagram_id)
+                #print(g.diagram_id)
                 g.cells.prefix = g.diagram_id
                 graph_xml = diagram
-                print(graph_xml)
+                #print(graph_xml)
+                print(ET.dump(graph_xml))
                 g.mxgraph_model = MxGraphModel.from_xml(g.cells, graph_xml)
                 return g
         return g

@@ -611,7 +611,7 @@ def dump_geometry():
     f = open("test.drawio","r")
     #g = mx.from_file(f )
     g = mx.from_file_getbyid(f, "phy-network")
-    print(g.diagram_id)
+    #print(g.diagram_id)
     #print(XET.dump(g.mxgraph_model.to_xml(g.cells)))
     print("----cells----")
     for cell in g.cells:
