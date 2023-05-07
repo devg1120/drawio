@@ -1,4 +1,5 @@
 import sys
+import os
 sys.path.append("../")
 import mxgraph.mxgraph 
 import xml.etree.ElementTree as XET
@@ -467,6 +468,7 @@ def phy_network_layout():
             ["hostname_B2",  750,  400, 160, 60],
             ["hostname_B3",  950,  400, 160, 60],
             ["hostname_B4", 1150,  400, 160, 60],
+            ["hostname_B5", 1150,  400, 160, 60],
 
             ["hostname_A21", 350,  600, 160, 60],
             ["hostname_A22",  50,  600, 160, 60],
@@ -482,13 +484,42 @@ def phy_network_layout():
             ["hostname_B",  "Gi0/0/2","hostname_B2", "Gi0/0/1", False,"TEST"],
             ["hostname_B",  "Gi0/0/3","hostname_B3", "Gi0/0/1", False,"TEST"],
             ["hostname_B",  "Gi0/0/4","hostname_B4", "Gi0/0/1", False,"TEST"],
+            ["hostname_B",  "Gi0/0/4","hostname_B5", "Gi0/0/1", False,"TEST"],
             ["hostname_A2", "Gi0/0/2","hostname_A21","Gi0/0/1", False,"TEST"],
             ["hostname_B3", "Gi0/0/2","hostname_B31","Gi0/0/1", False,"TEST"],
             ["hostname_A22","Gi0/0/1","hostname_B4", "Gi0/0/2", False,"TEST"],
             ["hostname_A22","Gi0/0/2","hostname_A1", "Gi0/0/2", True, "TEST"]
             ]
 
+    geopath =  "." + "test.drawio" + "_" + "phy-network-layout" + ".geometry"
+
     autolayout(vlist, elist)
+
+    if os.path.isfile(geopath):
+        print("geometry exist!!!")
+        #import_geometry(vlist, geopath)
+        f = open(geopath, "r")
+        lines = f.readlines()
+        f.close()
+        geometry_dict = {}
+
+        for l in lines:
+            para = l.split(",")
+            hostname = para[0]
+            x        = para[1]
+            y        = para[2]
+            geometry_dict[hostname] = (x, y)
+
+        #print(geometry_dict)
+        for v in vlist:
+            hostname =v[0]
+            if hostname in geometry_dict.keys():
+              v[1] =  geometry_dict[hostname][0]
+              v[2] =  geometry_dict[hostname][1]
+
+        for v in vlist:
+            print(v)
+        #sys.exit()
 
     vdict = {}
 
@@ -507,7 +538,7 @@ def phy_network_layout():
         w        = v[3]
         h        = v[4]
         #print(hostname)
-        vt = g2.insert_vertex(parent=parent, value=hostname, x=x , y=y, width=w , height=h , style=sw_style, relative=False)
+        vt = g2.insert_vertex(parent=parent, value=hostname, x=x , y=y, width=w , height=h , vertex_type=mxgraph.mxgraph.Vertex.NODE ,style=sw_style, relative=False)
         vdict[hostname] = vt
     #print(vdict)
     for e in elist:
@@ -605,61 +636,22 @@ def xtest_read_file():
     mx.from_file("test.drawio")
     mx.to_file(sys.stdout)
 
-def dump_geometry(filename, diagramid):
-    #mx = mxgraph.mxgraph.MxGraphModel()
-    mx = mxgraph.mxgraph.MxGraph()
-    f = open(filename,"r")
-    #g = mx.from_file(f )
-    #g = mx.from_file_getbyid(f, "phy-network-layout")
-    g = mx.from_file_getbyid(f, diagramid)
-    #print(g.diagram_id)
-    #print(XET.dump(g.mxgraph_model.to_xml(g.cells)))
 
-    #print("----cells----")
-    #for cell in g.cells:
-    #    if g.cells[cell].vertex:
-    #        print("vertex", end=" ")
-    #        print(cell)
-    #        print(g.cells[cell].vertex_type)
-    #    elif g.cells[cell].edge:
-    #        print("edge  ", end=" ")
-    #        print(cell)
-    #    else:
-    #        print("***   ", end=" ")
-    #        print(cell)
-    #print("----end cells----")
-            
-    w = open("." + filename + "_" + diagramid + ".geometry" ,"w")
-    for cell in g.cells:
-        if g.cells[cell].vertex and g.cells[cell].vertex_type == 'Vertex.NODE':
-           #print(g.cells[cell].value())
-           print(g.cells[cell]._value, end=",", file=w)
-           geo = g.cells[cell].geometry
-           print(geo.x, end=",", file=w)
-           print(geo.y, end=",", file=w)
-           print(geo.width, end=",", file=w)
-           print(geo.height, end=",", file=w)
-           print("", file=w)
-
-    #mx.to_file(sys.stdout)
-    w.close()
-    f.close()
 def main():
 
-    dump_geometry("test.drawio", "phy-network-layout")
-    #g1 = ip_network_drawio()
-    #g2 = phy_network_drawio()
-    #g3 = phy_network_layout()
-    #g4 = stp_network_drawio()
-    #gdict = { "ip-network" : g1, "phy-network" : g2, "phy-layout" : g3, "stp-network" : g4}
+    g1 = ip_network_drawio()
+    g2 = phy_network_drawio()
+    g3 = phy_network_layout()
+    g4 = stp_network_drawio()
+    gdict = { "ip-network" : g1, "phy-network" : g2, "phy-layout" : g3, "stp-network" : g4}
 
-    #f = open("/var/tmp/test.xml","w")
-    #mxgraph.mxgraph.multi_graphdict_to_file(gdict, f)
-    #f.close()
+    f = open("/var/tmp/test.xml","w")
+    mxgraph.mxgraph.multi_graphdict_to_file(gdict, f)
+    f.close()
 
-    #tree = XET.parse("/var/tmp/test.xml")
-    #XET.indent(tree, space='  ')
-    #tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
+    tree = XET.parse("/var/tmp/test.xml")
+    XET.indent(tree, space='  ')
+    tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
 
 
 if __name__=="__main__":

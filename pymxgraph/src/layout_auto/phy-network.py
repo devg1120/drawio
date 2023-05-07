@@ -1,4 +1,5 @@
 import sys
+import os
 sys.path.append("../")
 import mxgraph.mxgraph 
 import xml.etree.ElementTree as XET
@@ -383,7 +384,8 @@ def layoutprint(layout):
         print(e)
     print("-")
 
-def autolayout(vlist, elist):
+#def autolayout(vlist, elist):
+def autolayout(vlist, elist, scale, margin):
     #
     # https://qiita.com/scapegoat_11_/items/d99cbcfea053d9fcd8d2
     #
@@ -419,7 +421,8 @@ def autolayout(vlist, elist):
     # https://igraph.org/python/tutorial/0.9.6/visualisation.html
     #
 
-    layout.scale(200)
+    #layout.scale(200)
+    layout.scale(scale)
 
     #layoutprint(layout)
     print(layout.boundaries())
@@ -428,16 +431,16 @@ def autolayout(vlist, elist):
 
     tx = 0
     if top_left_point[0] < 0:
-        tx = -top_left_point[0] + 100
-    elif top_left_point[0] <= 100:
-        tx = 100 - top_left_point[0]
+        tx = -top_left_point[0] + margin
+    elif top_left_point[0] <= margin:
+        tx = margin - top_left_point[0]
     else:
         tx = 0
     ty = 0
     if top_left_point[1] < 0:
-        ty = -top_left_point[1] + 100
-    elif top_left_point[1] <= 100:
-        ty = 100 - top_left_point[1]
+        ty = -top_left_point[1] + margin
+    elif top_left_point[1] <= margin:
+        ty = margin - top_left_point[1]
     else:
         ty = 0
 
@@ -467,6 +470,7 @@ def phy_network_layout():
             ["hostname_B2",  750,  400, 160, 60],
             ["hostname_B3",  950,  400, 160, 60],
             ["hostname_B4", 1150,  400, 160, 60],
+            ["hostname_B5", 1150,  400, 160, 60],
 
             ["hostname_A21", 350,  600, 160, 60],
             ["hostname_A22",  50,  600, 160, 60],
@@ -482,13 +486,43 @@ def phy_network_layout():
             ["hostname_B",  "Gi0/0/2","hostname_B2", "Gi0/0/1", False,"TEST"],
             ["hostname_B",  "Gi0/0/3","hostname_B3", "Gi0/0/1", False,"TEST"],
             ["hostname_B",  "Gi0/0/4","hostname_B4", "Gi0/0/1", False,"TEST"],
+            ["hostname_B",  "Gi0/0/4","hostname_B5", "Gi0/0/1", False,"TEST"],
             ["hostname_A2", "Gi0/0/2","hostname_A21","Gi0/0/1", False,"TEST"],
             ["hostname_B3", "Gi0/0/2","hostname_B31","Gi0/0/1", False,"TEST"],
             ["hostname_A22","Gi0/0/1","hostname_B4", "Gi0/0/2", False,"TEST"],
             ["hostname_A22","Gi0/0/2","hostname_A1", "Gi0/0/2", True, "TEST"]
             ]
 
-    autolayout(vlist, elist)
+    geopath =  "." + "test.drawio" + "_" + "phy-network-layout" + ".geometry"
+
+    #autolayout(vlist, elist)
+    autolayout(vlist, elist, 200, 100)   # scale = 200  margin = 100
+
+    if os.path.isfile(geopath):
+        print("geometry exist!!!")
+        #import_geometry(vlist, geopath)
+        f = open(geopath, "r")
+        lines = f.readlines()
+        f.close()
+        geometry_dict = {}
+
+        for l in lines:
+            para = l.split(",")
+            hostname = para[0]
+            x        = para[1]
+            y        = para[2]
+            geometry_dict[hostname] = (x, y)
+
+        #print(geometry_dict)
+        for v in vlist:
+            hostname =v[0]
+            if hostname in geometry_dict.keys():
+              v[1] =  geometry_dict[hostname][0]
+              v[2] =  geometry_dict[hostname][1]
+
+        for v in vlist:
+            print(v)
+        #sys.exit()
 
     vdict = {}
 
