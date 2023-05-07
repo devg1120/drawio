@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="py-mxgraph">
+  <diagram id="ip-network" name="ip-network">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="ip-network-0" parent="1" style="shape=ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;" value="VRF&#10;10" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="400" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-1" parent="1" style="shape=ellipse;strokeWidth=3;whiteSpace=wrap;html=1;aspect=fixed;" value="VRF&#10;20" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="500" y="400" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-2" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="10.100.2.0 /24" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="200" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-3" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="10.100.3.0 /24" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="200" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-4" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="10.100.3.0 /24" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="600" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-5" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="10.100.3.0 /24" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="400" y="600" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-6" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="10.100.3.0 /24" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="700" y="600" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-7" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="ip-network-0" target="ip-network-2" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-7-edge_src_label" parent="ip-network-7" style="labelBackgroundColor=#ffffff;" value="100.1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-8" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="ip-network-0" target="ip-network-3" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-8-edge_src_label" parent="ip-network-8" style="labelBackgroundColor=#ffffff;" value="200.1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-9" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="ip-network-1" target="ip-network-3" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-9-edge_src_label" parent="ip-network-9" style="labelBackgroundColor=#ffffff;" value="200.254" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-10" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="ip-network-1" target="ip-network-4" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-10-edge_src_label" parent="ip-network-10" style="labelBackgroundColor=#ffffff;" value="300.1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-11" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="ip-network-1" target="ip-network-5" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-11-edge_src_label" parent="ip-network-11" style="labelBackgroundColor=#ffffff;" value="400.1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-12" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="ip-network-1" target="ip-network-6" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-network-12-edge_src_label" parent="ip-network-12" style="labelBackgroundColor=#ffffff;" value="500.1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="phy-network" name="phy-network">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="phy-network-0" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="200" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-1" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="800" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-2" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="50" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-3" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="350" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-4" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="550" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-5" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="750" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-6" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B3" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="950" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-7" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B4" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="1150" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-8" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A21" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="350" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-9" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A22" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="50" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-10" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B31" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="950" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-11" parent="1" style="edgeStyle=none;strokeWidth=3;startArrow=box;endArrow=box;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-0" target="phy-network-1" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-11-edge_src_label" parent="phy-network-11" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-11-edge_dst_label" parent="phy-network-11" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-12" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-0" target="phy-network-2" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-12-edge_src_label" parent="phy-network-12" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-12-edge_dst_label" parent="phy-network-12" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-13" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-0" target="phy-network-3" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-13-edge_src_label" parent="phy-network-13" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-13-edge_dst_label" parent="phy-network-13" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-14" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-1" target="phy-network-4" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-14-edge_src_label" parent="phy-network-14" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-14-edge_dst_label" parent="phy-network-14" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-15" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-1" target="phy-network-5" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-15-edge_src_label" parent="phy-network-15" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-15-edge_dst_label" parent="phy-network-15" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-16" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-1" target="phy-network-6" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-16-edge_src_label" parent="phy-network-16" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-16-edge_dst_label" parent="phy-network-16" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-17" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-1" target="phy-network-7" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-17-edge_src_label" parent="phy-network-17" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-17-edge_dst_label" parent="phy-network-17" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-18" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-3" target="phy-network-8" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-18-edge_src_label" parent="phy-network-18" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-18-edge_dst_label" parent="phy-network-18" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-19" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-6" target="phy-network-10" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-19-edge_src_label" parent="phy-network-19" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-19-edge_dst_label" parent="phy-network-19" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-20" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" source="phy-network-9" target="phy-network-7" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-20-edge_src_label" parent="phy-network-20" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-20-edge_dst_label" parent="phy-network-20" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="phy-network-layout" name="phy-layout">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="phy-network-layout-0" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="190.0" y="100.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-1" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="700.0" y="100.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-2" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A1" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="100.0" y="500.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-3" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A2" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="300.0" y="500.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-4" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B1" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="400.0" y="300.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-5" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B2" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="600.0" y="300.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-6" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B3" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="800.0" y="300.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-7" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B4" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="1000.0" y="300.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-8" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B5" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="1200.0" y="300.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-9" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A21" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="300.0" y="700.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-10" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_A22" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="1000.0" y="500.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-11" parent="1" style="shape=rectangle;strokeWidth=3;whiteSpace=wrap;html=1;" value="hostname_B31" vertex="1" vertex_type="Vertex.NODE">
+          <mxGeometry x="800.0" y="500.0" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-12" parent="1" style="edgeStyle=none;strokeWidth=3;startArrow=box;endArrow=box;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-0" target="phy-network-layout-1" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-12-edge_src_label" parent="phy-network-layout-12" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-12-edge_dst_label" parent="phy-network-layout-12" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-13" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-0" target="phy-network-layout-2" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-13-edge_src_label" parent="phy-network-layout-13" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-13-edge_dst_label" parent="phy-network-layout-13" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-14" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-0" target="phy-network-layout-3" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-14-edge_src_label" parent="phy-network-layout-14" style="labelBackgroundColor=#ffffff;" value="Gi0/0/3" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-14-edge_dst_label" parent="phy-network-layout-14" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-15" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-1" target="phy-network-layout-4" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-15-edge_src_label" parent="phy-network-layout-15" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-15-edge_dst_label" parent="phy-network-layout-15" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-16" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-1" target="phy-network-layout-5" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-16-edge_src_label" parent="phy-network-layout-16" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-16-edge_dst_label" parent="phy-network-layout-16" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-17" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-1" target="phy-network-layout-6" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-17-edge_src_label" parent="phy-network-layout-17" style="labelBackgroundColor=#ffffff;" value="Gi0/0/3" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-17-edge_dst_label" parent="phy-network-layout-17" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-18" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-1" target="phy-network-layout-7" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-18-edge_src_label" parent="phy-network-layout-18" style="labelBackgroundColor=#ffffff;" value="Gi0/0/4" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-18-edge_dst_label" parent="phy-network-layout-18" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-19" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-1" target="phy-network-layout-8" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-19-edge_src_label" parent="phy-network-layout-19" style="labelBackgroundColor=#ffffff;" value="Gi0/0/4" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-19-edge_dst_label" parent="phy-network-layout-19" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-20" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-3" target="phy-network-layout-9" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-20-edge_src_label" parent="phy-network-layout-20" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-20-edge_dst_label" parent="phy-network-layout-20" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-21" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-6" target="phy-network-layout-11" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-21-edge_src_label" parent="phy-network-layout-21" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-21-edge_dst_label" parent="phy-network-layout-21" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-22" parent="1" style="edgeStyle=none;endArrow=none;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-10" target="phy-network-layout-7" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-22-edge_src_label" parent="phy-network-layout-22" style="labelBackgroundColor=#ffffff;" value="Gi0/0/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-22-edge_dst_label" parent="phy-network-layout-22" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-23" parent="1" style="edgeStyle=none;strokeWidth=3;startArrow=box;endArrow=box;curved=1;orthogonalLoop=1;jettySize=auto;html=1;" source="phy-network-layout-10" target="phy-network-layout-2" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-23-edge_src_label" parent="phy-network-layout-23" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phy-network-layout-23-edge_dst_label" parent="phy-network-layout-23" style="labelBackgroundColor=#ffffff;" value="Gi0/0/2" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="stp-network" name="stp-network">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="hostname_A" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="hostname_A" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="350" y="50" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hostname_B" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="hostname_B" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="400" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hostname_C" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="hostname_C" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="400" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hostname_A-D1" parent="hostname_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry y="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="None" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_A-D2" parent="hostname_A" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry y="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="90" y="None" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_B-D1" parent="hostname_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="-20" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_B-D2" parent="hostname_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="90" y="-20" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_B-D3" parent="hostname_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="None" y="10" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_B-D4" parent="hostname_B" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="None" y="50" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_C-D1" parent="hostname_C" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="10" y="-20" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_C-D2" parent="hostname_C" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="90" y="-20" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_C-D3" parent="hostname_C" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="-20" y="10" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hostname_C-D4" parent="hostname_C" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DP" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry width="20" height="20" relative="1" as="geometry">
+            <mxPoint as="offset" x="-20" y="50" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stp-network-0" parent="1" style="edgeStyle=none;curved=0;orthogonalLoop=1;endArrow=none;jettySize=auto;html=1;jumpStyle=arc;" source="hostname_A-D1" target="hostname_B-D1" value="TEST1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-0-edge_src_label" parent="stp-network-0" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-0-edge_dst_label" parent="stp-network-0" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-1" parent="1" style="edgeStyle=none;curved=0;orthogonalLoop=1;endArrow=none;jettySize=auto;html=1;jumpStyle=arc;" source="hostname_A-D2" target="hostname_B-D2" value="TEST1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-1-edge_src_label" parent="stp-network-1" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-1-edge_dst_label" parent="stp-network-1" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-2" parent="1" style="edgeStyle=none;curved=0;orthogonalLoop=1;endArrow=none;jettySize=auto;html=1;jumpStyle=arc;" source="hostname_B-D3" target="hostname_C-D3" value="TEST1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-2-edge_src_label" parent="stp-network-2" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-2-edge_dst_label" parent="stp-network-2" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-3" parent="1" style="edgeStyle=none;curved=0;orthogonalLoop=1;endArrow=none;jettySize=auto;html=1;jumpStyle=arc;" source="hostname_B-D4" target="hostname_C-D4" value="TEST1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-3-edge_src_label" parent="stp-network-3" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-3-edge_dst_label" parent="stp-network-3" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-4" parent="1" style="edgeStyle=none;curved=0;orthogonalLoop=1;endArrow=none;jettySize=auto;html=1;jumpStyle=arc;" source="hostname_A-D1" target="hostname_C-D1" value="TEST1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-4-edge_src_label" parent="stp-network-4" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-4-edge_dst_label" parent="stp-network-4" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-5" parent="1" style="edgeStyle=none;curved=0;orthogonalLoop=1;endArrow=none;jettySize=auto;html=1;jumpStyle=arc;" source="hostname_A-D2" target="hostname_C-D2" value="TEST1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-5-edge_src_label" parent="stp-network-5" style="labelBackgroundColor=#ffffff;" value="G1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stp-network-5-edge_dst_label" parent="stp-network-5" style="labelBackgroundColor=#ffffff;" value="E1/1/1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="0.8" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

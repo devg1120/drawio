@@ -143,8 +143,21 @@ class MxPoint(MxBase):
 
     @classmethod
     def from_xml(cls, cell_store, xml_element):
-        x = int(xml_element.get('x'))
-        y = int(xml_element.get('y'))
+        #x = int(xml_element.get('x'))
+        #y = int(xml_element.get('y'))
+
+        x = ""
+        y = ""
+        if xml_element.get('x') != "None":
+            x = float_or_none(xml_element.get('x'))
+        else:
+            x = "None"
+
+        if xml_element.get('y') != "None":
+            y = float_or_none(xml_element.get('y'))
+        else:
+            y = "None"
+
         point = MxPoint(x,y)
         point.attrs.update(xml_element.items())
         return point
@@ -188,6 +201,9 @@ class MxGeometry(MxBase):
                 xml_element.get('relative') == '1')
         points = [ MxPoint.from_xml(cell_store, p) for p in xml_element.findall('Array/mxPoint') ]
         geom.points = points
+
+        geom.point = [ MxPoint.from_xml(cell_store, p) for p in xml_element.findall('mxPoint') ]
+
         sp_xml = xml_element.find("mxPoint[@as='sourcePoint']")
         if sp_xml is not None:
             geom.source_point = MxPoint.from_xml(cell_store, sp_xml)
@@ -232,10 +248,11 @@ class MxGeometry(MxBase):
 
         if self.point:
             #print("point")
-            p = ET.SubElement(geom, 'MxPoint')
+            p = ET.SubElement(geom, 'mxPoint')
+            #print(type(self.point))
             p.set('as','offset')
-            p.set('x',self.point.x)
-            p.set('y',self.point.y)
+            p.set('x',str(self.point[0].x))
+            p.set('y',str(self.point[0].y))
         return geom
 
 class MxCell(MxBase):
@@ -606,7 +623,7 @@ class MxGraph:
         g.mxgraph_model = MxGraphModel.from_xml(g.cells, graph_xml)
         return g
 
-    def from_file(self, f):
+    def from_file_org(self, f):
         g = MxGraph()
         et = dxml.parse(f)
         root = et.getroot()
@@ -618,6 +635,21 @@ class MxGraph:
         #print(ET.dump(diagram))
         g.mxgraph_model = MxGraphModel.from_xml(g.cells, diagram)
         return g
+
+    def from_file(self, f ):
+        #g = MxGraph()
+        et = dxml.parse(f)
+        root = et.getroot()
+        lists = root.findall('.//diagram')
+        gdict = {}
+        for diagram in lists:
+             g = MxGraph()
+             g.diagram_id = diagram.get('id')
+             diagram_id = diagram.get('id')
+             g.mxgraph_model = MxGraphModel.from_xml(g.cells, diagram)
+             gdict[diagram_id] = g
+
+        return gdict
 
     def from_file_getbyid(self, f, _id):
         g = MxGraph()
@@ -657,10 +689,11 @@ class MxGraph:
         # ET.dump(mxfile_xml)
         f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
 
-    def to_file(self, f):
+    def to_file(self, f, name='Page-1'):
         diagram_xml = ET.Element('diagram')
         diagram_xml.set('id', self.diagram_id)
-        diagram_xml.set('name', 'Page-1')
+        #diagram_xml.set('name', 'Page-1')
+        diagram_xml.set('name', name)
         graph_xml = self.mxgraph_model.to_xml(self.cells)
         diagram_xml.append(graph_xml)
         mxfile_xml = ET.Element('mxfile')
@@ -690,6 +723,7 @@ def multi_graph_to_file( graphs , f):
         f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
 
 def multi_graphdict_to_file( graphdict , f):
+        print("multi_graphdict_to_file()")
         mxfile_xml = ET.Element('mxfile')
         mxfile_xml.set('host', 'py-mxgraph')
         count = 0
