@@ -186,6 +186,7 @@ class MxGeometry(MxBase):
         self.point = None
         self.source_point = None
         self.target_point = None
+        self.z = "z"
 
     @classmethod
     def from_xml(cls, cell_store, xml_element):
@@ -390,6 +391,17 @@ class MxCell(MxBase):
     def target(self, cell):
         """Sets the target cell of an edge cell to cell."""
         self._target_id = cell.cell_id
+
+    @property
+    def value(self):
+        if self._value is None:
+            return None
+        return self._value
+
+    @target.setter
+    def value(self, v):
+        self._value = v
+        self.attrs["value"] = v
 
 
 class MxGraphModel(MxBase):
@@ -691,10 +703,27 @@ class MxGraph:
 
     def to_file(self, f, name='Page-1'):
         diagram_xml = ET.Element('diagram')
-        diagram_xml.set('id', self.diagram_id)
+        diagram_xml.set('id', self.diagram_id + "###")
         #diagram_xml.set('name', 'Page-1')
         diagram_xml.set('name', name)
         graph_xml = self.mxgraph_model.to_xml(self.cells)
+        diagram_xml.append(graph_xml)
+        mxfile_xml = ET.Element('mxfile')
+        mxfile_xml.set('host', 'py-mxgraph')
+        # mxfile_xml.set('modified', 'TODO')
+        # mxfile_xml.set('version', 'TODO')
+        # mxfile_xml.set('type', 'device')
+        mxfile_xml.append(diagram_xml)
+        # TODO: dump to file f, not stdout
+        #ET.dump(mxfile_xml)
+        f.write(dxml.tostring(mxfile_xml).decode('utf-8'))
+
+    def to_file_by_cells(self, f, cells, name='Page-1'):
+        diagram_xml = ET.Element('diagram')
+        diagram_xml.set('id', self.diagram_id)
+        #diagram_xml.set('name', 'Page-1')
+        diagram_xml.set('name', name)
+        graph_xml = self.mxgraph_model.to_xml(cells)
         diagram_xml.append(graph_xml)
         mxfile_xml = ET.Element('mxfile')
         mxfile_xml.set('host', 'py-mxgraph')
