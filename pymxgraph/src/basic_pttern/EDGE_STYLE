@@ -1,0 +1,22 @@
+https://jgraph.github.io/mxgraph/docs/js-api/files/util/mxConstants-js.html#mxConstants.STYLE_EDGE
+
+
+EDGESTYLE_LOOP
+EDGESTYLE_LOOP: 'loopEdgeStyle'
+Name of the loop edge style.  Can be used as a string value for the STYLE_EDGE style.
+
+EDGESTYLE_SIDETOSIDE
+EDGESTYLE_SIDETOSIDE: 'sideToSideEdgeStyle'
+Name of the side to side edge style.  Can be used as a string value for the STYLE_EDGE style.
+
+EDGESTYLE_TOPTOBOTTOM
+EDGESTYLE_TOPTOBOTTOM: 'topToBottomEdgeStyle'
+Name of the top to bottom edge style.  Can be used as a string value for the STYLE_EDGE style.
+
+EDGESTYLE_ORTHOGONAL
+EDGESTYLE_ORTHOGONAL: 'orthogonalEdgeStyle'
+Name of the generic orthogonal edge style.  Can be used as a string value for the STYLE_EDGE style.
+
+EDGESTYLE_SEGMENT
+EDGESTYLE_SEGMENT: 'segmentEdgeStyle'
+Name of the generic segment edge style.  Can be used as a string value for the STYLE_EDGE style.

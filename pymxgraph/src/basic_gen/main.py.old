@@ -25,9 +25,13 @@ def create_write_drawio():
     g =  mxgraph.mxgraph.MxGraph(diagram_id='idunno')
     parent = g.create_group_cell(cell_id='1', parent=g.root)
     style = { 'ellipse': None, 'whiteSpace': 'wrap', 'html': '1', 'aspect': 'fixed' }
-    source_vertex = g.insert_vertex(parent=parent, value="Hello!", x=100, y=200, width=40, height=30, style=style, relative=False)
-    target_vertex = g.insert_vertex(parent=parent, value="Goodbye!", x=400, y=200, width=40, height=30, style=style, relative=False)
+    source_vertex = g.insert_vertex(parent=parent, value="Hello!", x=100, y=200, width=90, height=30, style=style, relative=False)
+    target_vertex = g.insert_vertex(parent=parent, value="Goodbye!", x=600, y=200, width=90, height=30, style=style, relative=False)
 
+    style2 = { 'ellipse': None, 'whiteSpace': 'wrap', 'html': '1', 'aspect': 'fixed' }
+    source_vertex2 = g.insert_vertex(parent=parent, value="Hello!", x=100, y=500, width=90, height=30, style=style2, relative=False)
+
+    target_vertex2 = g.insert_vertex(parent=parent, value="Goodbye!", x=600, y=500, width=90, height=30, style=style2, relative=False)
     # https://blog.kakinota.net/how-to-zukai/programming/library/mxgraph/basic/style/
     #EDGESTYLE_SIDETOSIDE: 'sideToSideEdgeStyle',
     #EDGESTYLE_TOPTOBOTTOM: 'topToBottomEdgeStyle',
@@ -43,20 +47,44 @@ def create_write_drawio():
     ## bending
     edge_style3 = { 'edgeStyle': 'orthogonalEdgeStyle', 'curved': '0', 'orthogonalLoop': '1', 'jettySize': 'auto', 'html': '1' , 'jumpStyle' : 'arc'}
 
+    
+    ##        exitX=0;exitY=0.5;exitDx=0;exitDy=0;direction=noth;entryX=0.5;entryY=1;entryDx=0;entryDy=0;
+    S = {'exitX'  :0,
+         'exitY'  :0.5,
+         'exitDx' :0,
+         'exitDy' :0,
+         'entryX' :0.5,
+         'entryY' :1,
+         'entryDx':0,
+         'entryDy':0
+           }
+
+
+        
+
+
     edge = g.insert_edge(parent=parent, source=source_vertex, target=target_vertex, value="TEST", style=edge_style3)
+    edge2 = g.insert_edge(parent=parent, source=source_vertex2, target=target_vertex2, value="TEST", style=edge_style3 | S)
 
     g.set_edge_src_label(edge, "G1/1/1", style={'labelBackgroundColor' : "#ffffff"} )
     g.set_edge_dst_label(edge, "E1/1/1", style={'labelBackgroundColor' : "#ffffff"} )
+
+
+
+
+
+
+
 
     #g.add_edge_geometry(edge, [(10,20),(30,40)])
     #g.set_source_point(edge, (50,60))
     #g.set_target_point(edge, (70,80))
     # ET.dump(g.mxgraph_model.to_xml(g.cells))
-    f = open("/var/tmp/test.xml","w")
+    f = open("test.xml","w")
     #g.to_file(sys.stdout)
     g.to_file(f)
     f.close()
-    tree = XET.parse("/var/tmp/test.xml")
+    tree = XET.parse("test.xml")
     XET.indent(tree, space='  ')
     tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
     #print("")
@@ -242,10 +270,10 @@ def main():
     # read_write_drawio()
     #print("#create_write_drawio()")
 
-    #create_write_drawio()
+    create_write_drawio()
     #create_write_drawio2()
     #create_write_drawio3()
-    create_write_drawio4()
+    #create_write_drawio4()
 
     #print("#create_compress_write_drawio()")
     #create_compress_write_drawio()

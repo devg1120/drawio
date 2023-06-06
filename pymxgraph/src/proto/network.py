@@ -454,11 +454,11 @@ def main():
     g3 = stp_network_drawio()
     gdict = { "ip-network" : g1, "phy-network" : g2, "stp-network" : g3}
 
-    f = open("/var/tmp/test.xml","w")
+    f = open("test.xml","w")
     mxgraph.mxgraph.multi_graphdict_to_file(gdict, f)
     f.close()
 
-    tree = XET.parse("/var/tmp/test.xml")
+    tree = XET.parse("test.xml")
     XET.indent(tree, space='  ')
     tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
 

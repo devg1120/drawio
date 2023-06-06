@@ -1,0 +1,79 @@
+<mxfile host="Electron" modified="2023-06-06T08:21:41.721Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="qgLg8zYdALndFBo5A2ak" version="21.2.1" type="device">
+  <diagram id="idunno###" name="Page-1">
+    <mxGraphModel dx="1098" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="idunno-0" value="Hello#!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="100" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-1" value="Goodbye!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="100" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-2" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" parent="1" source="idunno-0" target="idunno-1" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-3" value="Hello#!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="200" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-4" value="Goodbye!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="200" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-5" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" parent="1" source="idunno-3" target="idunno-4" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-6" value="Hello#!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="300" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-7" value="Goodbye!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="300" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-8" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0;exitY=0.2;entryX=0.5;entryY=1;" parent="1" source="idunno-6" target="idunno-7" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-9" value="Hello#!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="400" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-10" value="Goodbye!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="400" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-11" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="idunno-9" target="idunno-10" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-12" value="Hello#!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="600" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-13" value="Goodbye!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="600" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-14" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="idunno-12" target="idunno-13" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-15" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.7;exitY=0;entryX=0.7;entryY=1;" parent="1" source="idunno-12" target="idunno-13" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-16" value="Hello#!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="800" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-17" value="Goodbye!" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="800" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-18" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="idunno-16" target="idunno-17" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="idunno-19" value="TEST" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.7;exitY=0;entryX=0.7;entryY=1;" parent="1" source="idunno-16" target="idunno-17" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="163" y="750" />
+              <mxPoint x="430" y="750" />
+              <mxPoint x="430" y="930" />
+              <mxPoint x="659" y="930" />
+              <mxPoint x="659" y="850" />
+              <mxPoint x="663" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

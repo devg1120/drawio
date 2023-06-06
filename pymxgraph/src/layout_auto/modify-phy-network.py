@@ -278,9 +278,9 @@ def modify_edge_value(filename, filename2,diagram_id):
 
 def main():
 
-    #modify_edge_value("test.drawio", "test_dump.drawio", "phy-network-layout")
+    modify_edge_value("test.drawio", "test_dump.drawio", "phy-network-layout")
     #modify_edge_style("test.drawio", "test_dump.drawio", "phy-network-layout")
-    modify_overlay_edge("test.drawio", "test_dump.drawio", "phy-network-layout")
+    #modify_overlay_edge("test.drawio", "test_dump.drawio", "phy-network-layout")
 
 
 
