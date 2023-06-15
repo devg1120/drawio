@@ -1,0 +1,17 @@
+<shape aspect="variable" h="50" name="Table" strokewidth="inherit" w="90">
+  <connections />
+  <background>
+    <rect h="50" w="90" x="0" y="0" />
+  </background>
+  <foreground>
+    <fillstroke />
+    <rect h="7" w="10" x="0" y="0" />
+    <stroke />
+    <rect h="7" w="10" x="0" y="43" />
+    <stroke />
+    <rect h="7" w="10" x="80" y="0" />
+    <stroke />\
+    <rect h="7" w="10" x="80" y="43" />
+    <stroke />
+  </foreground>
+  </shape>

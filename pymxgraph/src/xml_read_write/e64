@@ -1,0 +1,76 @@
+diagram-id:	 idunno###
+diagram-name:	 Page-1
+----cells----
+***    0
+***    1
+idunno-0 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-1 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-2 edge   idunno-0 idunno-1 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;
+idunno-3 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-4 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-5 edge   idunno-3 idunno-4 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0;exitY=0.5;entryX=0.5;entryY=1;
+idunno-6 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-7 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-8 edge   idunno-6 idunno-7 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0;exitY=0.2;entryX=0.5;entryY=1;
+idunno-9 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-10 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-11 edge   idunno-9 idunno-10 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;
+idunno-12 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-13 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-14 edge   idunno-12 idunno-13 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;
+idunno-15 edge   idunno-12 idunno-13 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.7;exitY=0;entryX=0.7;entryY=1;
+idunno-16 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-17 vertex shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;
+idunno-18 edge   idunno-16 idunno-17 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;
+idunno-19 edge   idunno-16 idunno-17 edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;exitX=0.7;exitY=0;entryX=0.7;entryY=1;
+----end cells----
+diagram-id:	 GQk0Czdau2B2E7RYG4eq
+diagram-name:	 page-1
+----cells----
+***    0
+***    1
+G0avHX12ZUL-R_R_pCqJ-1 vertex swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;html=1;
+G0avHX12ZUL-R_R_pCqJ-2 vertex swimlane;startSize=20;horizontal=0;html=1;
+G0avHX12ZUL-R_R_pCqJ-5 vertex rounded=1;whiteSpace=wrap;html=1;
+G0avHX12ZUL-R_R_pCqJ-3 vertex swimlane;startSize=20;horizontal=0;html=1;
+G0avHX12ZUL-R_R_pCqJ-6 vertex rounded=1;whiteSpace=wrap;html=1;
+G0avHX12ZUL-R_R_pCqJ-4 vertex swimlane;startSize=20;horizontal=0;html=1;
+G0avHX12ZUL-R_R_pCqJ-7 vertex shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;
+G0avHX12ZUL-R_R_pCqJ-8 edge   G0avHX12ZUL-R_R_pCqJ-5 G0avHX12ZUL-R_R_pCqJ-6 edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;
+G0avHX12ZUL-R_R_pCqJ-9 edge   G0avHX12ZUL-R_R_pCqJ-6 G0avHX12ZUL-R_R_pCqJ-7 edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;
+----end cells----
+----cells----
+vertex G0avHX12ZUL-R_R_pCqJ-1 TASK swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;html=1;
+vertex G0avHX12ZUL-R_R_pCqJ-2 Lane 1 swimlane;startSize=20;horizontal=0;html=1;
+vertex G0avHX12ZUL-R_R_pCqJ-5 TASK_A rounded=1;whiteSpace=wrap;html=1;
+vertex G0avHX12ZUL-R_R_pCqJ-3 Lane 2 swimlane;startSize=20;horizontal=0;html=1;
+vertex G0avHX12ZUL-R_R_pCqJ-6 TASK_B rounded=1;whiteSpace=wrap;html=1;
+vertex G0avHX12ZUL-R_R_pCqJ-4 Lane 3 swimlane;startSize=20;horizontal=0;html=1;
+vertex G0avHX12ZUL-R_R_pCqJ-7 TASK_C shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;
+----end cells----
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJhZGRfMV8iPg0KCTxnPg0KCQkJPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCwwQzQuNDgsMCwwLDQuNDgsMCwxMGMwLDUuNTIsNC40OCwxMCwxMCwxMHMxMC00LjQ4LDEwLTEwDQoJCQkgICAgICAgICAgICBDMjAsNC40OCwxNS41MiwwLDEwLDB6IE0xMCwxOGMtNC40MiwwLTgtMy41OC04LThzMy41OC04LDgtOHM4LDMuNTgsOCw4UzE0LjQyLDE4LDEwLDE4eiBNMTUsOWgtNFY1YzAtMC41NS0wLjQ1LTEtMS0xDQoJCQkJICAgICAgICAgICAgICAgIFM5LDQuNDUsOSw1djRINWMtMC41NSwwLTEsMC40NS0xLDFjMCwwLjU1LDAuNDUsMSwxLDFoNHY0YzAsMC41NSwwLjQ1LDEsMSwxczEtMC40NSwxLTF2LTRoNGMwLjU1LDAsMS0wLjQ1LDEtMQ0KCQkJCQkJICAgICAgICAgICAgQzE2LDkuNDUsMTUuNTUsOSwxNSw5eiIgY2xhc3M9InBhdGgwIiAvPg0KCQkJCQkJCSAgICAJPC9nPg0KCQkJCQkJCQk8L2c+DQoJCQkJCQkJCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnBhdGgwe2ZpbGw6IzAwMDAwMDt9PC9zdHlsZT48L3N2Zz4NCg0K
+********
+b'\xc5\x93\xd1\x0e\x82 \x14\x86\x9f\x86{\x82\\u\xd9\xac\x9e\xc0\x17@\xc5d\x1a8\xa0\xac\xb7\x0f9\xba\x86Z\x17n\xd5\xc6\xcd\xf9\xfe\xb3\xf3\xff\xb0\x03\xa2\xb1)Y\xc3\x11\xc1\xcc4<\xb3\x88\x1e\x10!7\xa6\x05Kk\x87\x89SJ\x80\x11\x86R\xb2\x0b\x07\x92\xbcz\x8c\xd5\xaa\xe2\xad\xc8m\xdf-d\xc9\xb5\xb0\xa0\xb6\xc0v~\x02="\xbcw\xb0;4\xce\x94\x94\xceW(i<;\x8d\xf4\x94e\xd5Y\xab\xab\xcc\x03a\x90u\x97y\x121\xf0#\xf8\x0ee_=\x82j\xea\xe8\xc8\x1bS\x1a\x17J\xf3\x0fi\nQ\xd7\xf0\x123\x93\xe7#o\x82\xc4\xab\x05\x89\x87\xb9\xdf3^\xd3\xdf9o\xffv\xe7\x91s\xb4\xd4\xdao\xd0dQ<\x85\xbf\xe6\xc1\x13'
+********
+b'%3Cshape%20aspect%3D%22variable%22%20h%3D%2250%22%20name%3D%22Table%22%20strokewidth%3D%22inherit%22%20w%3D%2290%22%3E%0A%20%20%3Cconnections%20%2F%3E%0A%20%20%3Cbackground%3E%0A%20%20%20%20%3Crect%20h%3D%2250%22%20w%3D%2290%22%20x%3D%220%22%20y%3D%220%22%20%2F%3E%0A%20%20%3C%2Fbackground%3E%0A%20%20%3Cforeground%3E%0A%20%20%20%20%3Cfillstroke%20%2F%3E%0A%20%20%20%20%3Crect%20h%3D%227%22%20w%3D%2210%22%20x%3D%220%22%20y%3D%220%22%20%2F%3E%0A%20%20%20%20%3Cstroke%20%2F%3E%0A%20%20%20%20%3Crect%20h%3D%227%22%20w%3D%2210%22%20x%3D%220%22%20y%3D%2243%22%20%2F%3E%0A%20%20%20%20%3Cstroke%20%2F%3E%0A%20%20%20%20%3Crect%20h%3D%227%22%20w%3D%2210%22%20x%3D%2280%22%20y%3D%220%22%20%2F%3E%0A%20%20%20%20%3Cstroke%20%2F%3E%0A%20%20%20%20%3Crect%20h%3D%227%22%20w%3D%2210%22%20x%3D%2280%22%20y%3D%2250%22%20%2F%3E%0A%20%20%20%20%3Cstroke%20%2F%3E%0A%20%20%3C%2Fforeground%3E%0A%3C%2Fshape%3E%0A'
+decode----------------------
+<shape aspect="variable" h="50" name="Table" strokewidth="inherit" w="90">
+  <connections />
+  <background>
+    <rect h="50" w="90" x="0" y="0" />
+  </background>
+  <foreground>
+    <fillstroke />
+    <rect h="7" w="10" x="0" y="0" />
+    <stroke />
+    <rect h="7" w="10" x="0" y="43" />
+    <stroke />
+    <rect h="7" w="10" x="80" y="0" />
+    <stroke />
+    <rect h="7" w="10" x="80" y="50" />
+    <stroke />
+  </foreground>
+</shape>
+
+----------------------
+shape_encode

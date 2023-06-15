@@ -1,0 +1,40 @@
+<shape h="60" w="100" aspect="variable" strokewidth="inherit">
+  <connections>
+    <constraint name="inp" x="0" y="0.333333" perimeter="1" />
+    <constraint name="inn" x="0" y="0.666666" perimeter="1" />
+    <constraint name="out" x="1" y="0.5" perimeter="1" />
+  </connections>
+  <background>
+    <path>
+      <move x="20" y="0" />
+      <line x="80" y="30" />
+      <line x="20" y="60" />
+      <close />
+    </path>
+  </background>
+  <foreground>
+    <fillstroke />
+    <path>
+      <!-- input lines -->
+      <move x="0" y="20" />
+      <line x="20" y="20" />
+      <move x="0" y="40" />
+      <line x="20" y="40" />
+      <!-- output lines -->
+      <move x="80" y="30" />
+      <line x="100" y="30" />
+      <!-- draw minus -->
+      <move x="25" y="43" />
+      <line x="35" y="43" />
+      <!-- draw plus -->
+      <move x="25" y="18" />
+      <line x="35" y="18" />
+      <move x="30" y="13" />
+      <line x="30" y="23" />
+    </path>
+    <stroke />
+  </foreground>
+</shape>
+
+
+

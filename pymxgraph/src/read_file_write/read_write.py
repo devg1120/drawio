@@ -612,22 +612,22 @@ def dump_geometry(filename, diagramid):
     #g = mx.from_file(f )
     #g = mx.from_file_getbyid(f, "phy-network-layout")
     g = mx.from_file_getbyid(f, diagramid)
-    #print(g.diagram_id)
-    #print(XET.dump(g.mxgraph_model.to_xml(g.cells)))
+    print(g.diagram_id)
+    print(XET.dump(g.mxgraph_model.to_xml(g.cells)))
 
-    #print("----cells----")
-    #for cell in g.cells:
-    #    if g.cells[cell].vertex:
-    #        print("vertex", end=" ")
-    #        print(cell)
-    #        print(g.cells[cell].vertex_type)
-    #    elif g.cells[cell].edge:
-    #        print("edge  ", end=" ")
-    #        print(cell)
-    #    else:
-    #        print("***   ", end=" ")
-    #        print(cell)
-    #print("----end cells----")
+    print("----cells----")
+    for cell in g.cells:
+        if g.cells[cell].vertex:
+            print("vertex", end=" ")
+            print(cell)
+            print(g.cells[cell].vertex_type)
+        elif g.cells[cell].edge:
+            print("edge  ", end=" ")
+            print(cell)
+        else:
+            print("***   ", end=" ")
+            print(cell)
+    print("----end cells----")
             
     w = open("." + filename + "_" + diagramid + ".geometry" ,"w")
     for cell in g.cells:
@@ -651,11 +651,16 @@ def file_read_write(filename1, filename2):
     f = open(filename1,"r")
     gdict = mx.from_file(f )
 
-    w = open("/var/tmp/test.xml","w")
+    w = open("test.xml","w")
     mxgraph.mxgraph.multi_graphdict_to_file(gdict, w)
     f.close()
     w.close()
-    tree = XET.parse("/var/tmp/test.xml")
+    tree = XET.parse("test.xml")
+    XET.indent(tree, space='  ')
+    tree.write(filename2, encoding='UTF-8', xml_declaration=True)
+
+def xml_format(filename1,  filename2):
+    tree = XET.parse(filename1)
     XET.indent(tree, space='  ')
     tree.write(filename2, encoding='UTF-8', xml_declaration=True)
 
@@ -670,22 +675,15 @@ def file_diagram_read_write(filename1, diagram_id, filename2):
 
 def main():
 
-    #dump_geometry("test.drawio", "phy-network-layout")
-    file_diagram_read_write("test.drawio", "phy-network-layout", "test2.drawio")
-    file_read_write("test.drawio",  "test3.drawio")
-    #g1 = ip_network_drawio()
-    #g2 = phy_network_drawio()
-    #g3 = phy_network_layout()
-    #g4 = stp_network_drawio()
-    #gdict = { "ip-network" : g1, "phy-network" : g2, "phy-layout" : g3, "stp-network" : g4}
+    dump_geometry("test.drawio", "phy-network-layout")
 
-    #f = open("/var/tmp/test.xml","w")
-    #mxgraph.mxgraph.multi_graphdict_to_file(gdict, f)
-    #f.close()
+    #file_diagram_read_write("test.drawio", "ip-network", "ip-network.drawio")
+    #xml_format("ip-network.drawio",  "ip-network2.drawio")
 
-    #tree = XET.parse("/var/tmp/test.xml")
-    #XET.indent(tree, space='  ')
-    #tree.write('test.drawio', encoding='UTF-8', xml_declaration=True)
+    #file_diagram_read_write("test.drawio", "phy-network-layout", "test2.drawio")
+
+    #file_read_write("test.drawio",  "test3.drawio")
+
 
 
 if __name__=="__main__":

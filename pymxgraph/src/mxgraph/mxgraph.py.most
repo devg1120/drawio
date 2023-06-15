@@ -303,15 +303,7 @@ class MxCell(MxBase):
         """
         if self._parent_id is None:
             return None
-        #return self.cell_store[self._parent_id]      ## BUG
-        return self._parent_id   # mxgraph.mxgraph.MxCell
-
-        #print(type(self._parent_id))
-        #if self._parent_id in self.cell_store:
-        #   return self.cell_store[self._parent_id] 
-        #else:
-        #   return  None
-
+        return self.cell_store[self._parent_id]
 
     @parent.setter
     #def parent(self, cell):
@@ -356,14 +348,8 @@ class MxCell(MxBase):
         for k,v in self.attrs.items():
             cell_xml.set(k,v)
         cell_xml.set('id', self.cell_id)
-        if self.parent is not None:                              #### BUG
-            if type(self.parent) is str: 
-              cell_xml.set('parent', self._parent_id)
-            else:
-              cell_xml.set('parent', self.parent.cell_id)
-            #cell_xml.set('parent', self._parent_id)
-        #if self._parent_id is not None:                          ### BUG
-        #    cell_xml.set('parent', self._parent_id)
+        if self.parent is not None:
+            cell_xml.set('parent', self.parent.cell_id)
         if self.style is not None:
             cell_xml.set('style', self.style.to_string())
         if self.source is not None:

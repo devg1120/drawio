@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2023-06-07T08:03:58.244Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="G3jAgfBANUaWjNi938Ij" version="21.2.1" type="device">
+  <diagram name="ページ1" id="GQk0Czdau2B2E7RYG4eq">
+    <mxGraphModel dx="1098" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-1" value="TASK" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="720" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-2" value="Lane 1" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="G0avHX12ZUL-R_R_pCqJ-1">
+          <mxGeometry y="20" width="720" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-5" value="TASK_A" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="G0avHX12ZUL-R_R_pCqJ-2">
+          <mxGeometry x="120" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-3" value="Lane 2" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="G0avHX12ZUL-R_R_pCqJ-1">
+          <mxGeometry y="140" width="720" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-6" value="TASK_B" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="G0avHX12ZUL-R_R_pCqJ-3">
+          <mxGeometry x="300" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-4" value="Lane 3" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="G0avHX12ZUL-R_R_pCqJ-1">
+          <mxGeometry y="260" width="720" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-7" value="TASK_C" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="G0avHX12ZUL-R_R_pCqJ-4">
+          <mxGeometry x="520" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="G0avHX12ZUL-R_R_pCqJ-1" source="G0avHX12ZUL-R_R_pCqJ-5" target="G0avHX12ZUL-R_R_pCqJ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G0avHX12ZUL-R_R_pCqJ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="G0avHX12ZUL-R_R_pCqJ-1" source="G0avHX12ZUL-R_R_pCqJ-6" target="G0avHX12ZUL-R_R_pCqJ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

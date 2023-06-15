@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="py-mxgraph">
+  <diagram id="shapes###" name="Page-1">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="shapes-0" parent="1" style="verticalLabelPositionr=bottom;html=1;verticalAlign=top;align=centerx;shape=stencil(3VZtboQgED2NP92oaM3+bGx7gfYClEUly4IBWt3bF8V+gK51LU2aJsbAm5nnG2aYGIBC1rDBQRLVAbgLkiSOIv3WewZP2ECPSJBGaegJyqMxSiX4EbfkoMYwwmosiDLW1mA52KU9AO6D6FbDnw8oEGcMI0U4kwP2MOv1DNGxEvyFHWbMtmsDeymLTnbAib/2aXdG6028y434swHGU5hXdpkVCqQXFIoKh3odlhRWFqEYP5i+78/2XrYYN9OwicwuhB2RoeAK9qdoOY+U2V/JId6ew0c7XpsEJexLeWO3vJt5f7nA8T8o8FU5bEwBUS7xqjhQaJ8L02GwLQ4ZUJRc4JUzqCSUmsm4UtkPh1bidvXWhrAvS+aL1lYbA4cWeFGb+qJ11GaTieFFrS9apxP2Dm3upxN80Tpqc4d270ftdtqlIWH7fXO/B6LJyBhQ86M1AG8=);" value="Script Task" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="10" y="10" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-1" parent="1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjU1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxsaW5lIHgxPSIzMCIgeTE9IjMwIiB4Mj0iMzUwIiB5Mj0iMjkwIiBzdHlsZT0ic3Ryb2tlOnJnYigyNTUsMCwwKTsgc3Ryb2tlLXdpZHRoOjMiIC8+CiAgICA8bGluZSB4MT0iMzAiIHkxPSI1MCIgeDI9IjMwMCIgeTI9IjM1MCIgc3R5bGU9InN0cm9rZTpncmV5OyBzdHJva2Utd2lkdGg6NSIgLz4KICAgIDxsaW5lIHgxPSIyMCIgeTE9IjgwIiB4Mj0iMTAwIiB5Mj0iMjAwIiBzdHlsZT0ic3Ryb2tlOm9yYW5nZXJlZDsgc3Ryb2tlLXdpZHRoOjgiIC8+Cjwvc3ZnPgoK;" value="task_svg" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="50" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-2" parent="1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,CjxzdmcgaGVpZ2h0PSI0MDAiIHdpZHRoPSI0MDAiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTSAzMCAzMCBMIDExMCAzMCBMIDExMCAxMTAgTCAzMCAxMTAgTCAzMCAzMCIgZmlsbD0idHJhbnNwYXJlbnQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJibGFjayIgLz4gIAogICAgICAgIDxwYXRoIGQ9Ik0gNTAgNTAgSCAxMzAgViAxMzAgSCA1MCBaIiBmaWxsPSJ0cmFuc3BhcmVudCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9ImJsdWUiIC8+CgkgICAgPHBhdGggZD0iTSA3MCA3MCBoIDgwIHYgODAgaCAtODAgWiIgZmlsbD0idHJhbnNwYXJlbnQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZWQiIC8+CgkgICAgPC9zdmc+Cg==;" value="task_svg" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="200" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-3" parent="1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjU1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHg9IjEyMCIgeT0iMTQwIiB3aWR0aD0iOTAiIGhlaWdodD0iOTAiIHN0eWxlPSJmaWxsOmdyZXk7IHN0cm9rZS13aWR0aDozOyBzdHJva2U6cmdiKDAsMCwwKSIgLz4KICAgIDwvc3ZnPgo=;" value="task_svg" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="350" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

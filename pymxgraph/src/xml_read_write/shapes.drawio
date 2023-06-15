@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="py-mxgraph">
+  <diagram id="shapes###" name="Page-1">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" vertex_type="Vertex.ETC" />
+        <mxCell id="1" parent="0" vertex_type="Vertex.ETC" />
+        <mxCell id="shapes-0" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" value="Hello#!" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="100" y="100" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-1" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;aspect=fixed;" value="Goodbye!" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="600" y="100" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-2" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" source="shapes-0" target="shapes-1" value="TEST" vertex_type="Vertex.ETC" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-3" parent="1" style="shape=rhombus;whiteSpace=wrap;html=1;aspect=fixed;" value="task_X" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="40" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-4" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=red;fontSize=40;" value="task_Y" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="40" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-5" parent="1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJhZGRfMV8iPg0KCTxnPg0KCQkJPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCwwQzQuNDgsMCwwLDQuNDgsMCwxMGMwLDUuNTIsNC40OCwxMCwxMCwxMHMxMC00LjQ4LDEwLTEwDQoJCQkgICAgICAgICAgICBDMjAsNC40OCwxNS41MiwwLDEwLDB6IE0xMCwxOGMtNC40MiwwLTgtMy41OC04LThzMy41OC04LDgtOHM4LDMuNTgsOCw4UzE0LjQyLDE4LDEwLDE4eiBNMTUsOWgtNFY1YzAtMC41NS0wLjQ1LTEtMS0xDQoJCQkJICAgICAgICAgICAgICAgIFM5LDQuNDUsOSw1djRINWMtMC41NSwwLTEsMC40NS0xLDFjMCwwLjU1LDAuNDUsMSwxLDFoNHY0YzAsMC41NSwwLjQ1LDEsMSwxczEtMC40NSwxLTF2LTRoNGMwLjU1LDAsMS0wLjQ1LDEtMQ0KCQkJCQkJICAgICAgICAgICAgQzE2LDkuNDUsMTUuNTUsOSwxNSw5eiIgY2xhc3M9InBhdGgwIiAvPg0KCQkJCQkJCSAgICAJPC9nPg0KCQkJCQkJCQk8L2c+DQoJCQkJCQkJCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnBhdGgwe2ZpbGw6IzAwMDAwMDt9PC9zdHlsZT48L3N2Zz4NCg0K;" value="task_q" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="340" y="40" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-6" parent="1" style="shape=gslib_png/notes;" value="task_q" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="440" y="40" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-7" parent="1" style="verticalLabelPositionr=bottom;html=1;verticalAlign=top;align=centerx;shape=mxgraph.floorplan.table;" value="task_q" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="40" y="200" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-8" parent="1" style="verticalLabelPositionr=bottom;html=1;verticalAlign=top;align=centerx;shape=stencil(xZPRDoIgFIafhnuCXHXZrJ7AF0DFZBo4oKy3Dzm6hloXbtXGzfn+s/P/sAOisSlZwxHBzDQ8s4geECE3pgVLa4eJU0qAEYZSsgsHkrx6jNWq4q3Ibd8tZMm1sKC2wHZ+Aj0ivHewOzTOlJTOVyhpPDuN9JRl1Vmrq8wDYZB1l3kSMfAj+A5lXz2CauroyBtTGhdK8w9pClHX8BIzk+cjb4LEqwWJh7nfM17T3zlv/3bnkXO01Npv0GRRPIW/5sET);" value="task_z" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="40" y="340" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-9" parent="1" style="verticalLabelPositionr=bottom;html=1;verticalAlign=top;align=centerx;shape=stencil(7VpLc6MwDP41uWb8iA0cd7LtcS972DMlZMOWQgbS179f88ZyQgR2H4d0Mg04tvRZ+iTZhhXflofwGK8YCctjHJ1W/OeKsZewSMKHVDUz9cuhaWSUNvev7T0hzX15KvLH+DXZndqeSXaIi+RU/crvVuSH6jN8+DbKs0ypSvKsPPM7+NTdlYYwyZRA8tZoIGvR6H5v75u7o1L7FJ/iQmvNwqe4afhVN9y70kpxWn9batVn2mG4pvWPnVa6TOud07kivep2qkilljPVlWKZ5NS8WKWXzcu3qn06nPn2IYwe/xb5c7a7AlvlojqTRHmaF6qh+a4xrBgn9R9q/ny7T9L0vJh9/YcUU1QZcUiAXcKDCfC8dem02SbNomaQFzHSatVkG8th5lSGL7d+Z/rtwvJwDE8qDrIqKNqrxtGqgSEpU4mJd+q6vRhF2ly+UaHzrb9v+cb0asQlUssMrkzE434/Ix7HSwQ1n2GpsEEKSJMs/pcnlWvqr3pwEx54AVF4rKah/s8ePsEO5QUiljkYJBQKEkrn79bBEksjvIOLuDypRIOH/lnscpHtszyLbfmJdWyYHg+humy+2zUTerTi0+F6TR8NeMqrpDa78EyHxyCwr2zv+tL/+kxUH8RkbhSdT9Er9QlLNav6ZMlTSCsHTL3x9LvxNE7T5FhWLvo2y5jLuwEp93uJVXg2x2PjzjTLBxX/ebuBG2svuKdjJW6v57snrYkIbj/Fst3nUkCWyZ8CQgtc5Ogi9eTvXiJ1UaGiNC9RFnVfhGx95OvTR+biSYsCkeg85t44Fxf52L295R7S2jmLCuW0c8CB9m399OWV6CJL+WcsU2w5GhDnHAUi6RdmkBtHr3AUe5zn6DjtKzezNHCfjoFI/LLyRvWPorrtkYfUDyjY2luySo2ei0Yq1cW+sZZ8Yt1vB3gbirR/Wk2hcvLO9E0D73sgzyyn4W28XlOHUJgIhRzwdAM3a4CQeX1LBxJ9sDoNUvgDolaZHCzUgfSEAZJyAJEaEBdtGwA+3zeM6PM1gCeDfhK9m4lhQz50asdxbAR9vz2KIqmeJnv729mbcmIQgnIfWrxqMkw+MnA3kkBSUM8RTB9gFBIg3JwhhRFYlJkAXcDb9HJ7gNIzwopKbsTVKI464m4AQt9N+qQiMGJLbVRNlJ4HQ98woxH8dOMmP1GPm3yU0uCjx8wM5ekguUFGJl2BDABCz4wYj5mlCDg6gAA5dQRwZDFmxkePURjlkoM0P6qxI5DYpepHHWdcWiRxHkVIaJePxwmZ8bKMZV73tZwuluQisJqWa/BowbNfog95o5XpL8vqAKqnyQzEsjQHH+LqQl08Foazp2RZ7TU8Zcq1lyrg65okcGFX3xBrL9M0gIun+ACoj9udT9PfCKmFFdn1Gfm1x161JOOlurq1eQO6bvgP);" value="task_yyy" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="400" y="200" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="shapes-10" parent="1" style="verticalLabelPositionr=bottom;html=1;verticalAlign=top;align=centerx;shape=stencil(rVXRcoMgEPyWPvCYDkrj5LVj2/8gSioTBQYxtn/fU6QNGqmaOE7M7enuZk8IImldUMVQjAtE3lAcJxg+oGxtGeGhprVimbHghWpOjyWzndpoeWYtz81AwUXBNDddl7wj/Ar3dCdJMykEkHApaq9z1QcyygU8iwWtmONTVunL1oOj76F6Jv1hQQXKFTNMD/YtiuKPdYIiKJj0xwMFZWM8wWgkuF+jRVJA5qIm6ZFm508tG5HfdKhoN8ZJw7UreWF/PsfJhH68Yyi5uGI4+AxkA8XIRLKIIitlzQKDAnySRI/OxEfSk9QskOuJl6VdKQHVf8J/2u3gCyyH7nXBXQo1XAFcOi8/qS3z2kQRMvFyv4llFDY8WGmb03vAu/q7na7isNZzTVu4VFw0K43Hez8vst442ULh+Vblnbajw922l1H4LtyIHMWW8EaLJkhxe+9xvdktpH9ssgf1qP2Ht4A7fwA=);" value="amp" vertex="1" vertex_type="Vertex.ETC">
+          <mxGeometry x="400" y="340" width="100" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
